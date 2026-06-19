@@ -44,8 +44,8 @@ export default function BrandsPage() {
             {/* Overlapping Dark Card (Kotak Hitam Menimpa Gambar) */}
             <div className="static md:absolute md:-bottom-10 md:right-8 w-full md:w-[460px] bg-primary text-white p-8 md:shadow-2xl z-20 mt-6 md:mt-0">
               <p className="font-serif text-lg leading-relaxed text-gray-200 mb-8">
-                "We do not just follow trends; we engineer the future of beauty. A curated portfolio designed to empower every expression."
-              </p>
+  &quot;We do not just follow trends; we engineer the future of beauty. A curated portfolio designed to empower every expression.&quot;
+</p>
               <div className="flex justify-between items-end border-t border-white/20 pt-6">
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-gold">Our Directory</span>
                 <div className="flex items-center gap-6">
