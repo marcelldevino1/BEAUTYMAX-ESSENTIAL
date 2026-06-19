@@ -10,7 +10,7 @@ export default function Home() {
       title: "Beauty for Every Expression", 
       description: "Beautymax Essential is a dynamic beauty company built on one belief: beauty should be accessible, expressive, and empowering for everyone.", 
       buttonText: "Explore Collections", 
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=1000",
+      image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=1000",
       link: "/brands" 
     },
     { 
@@ -18,7 +18,7 @@ export default function Home() {
       title: "Be Kind. Be Kool. Be You.", 
       description: "BK brings together different beauty brands with one shared spirit. A space for every side of you to explore, play, and express.", 
       buttonText: "Discover BK", 
-      image: "https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&q=80&w=1000",
+      image: "https://images.unsplash.com/photo-1512496015851-a1dc8a477d5d?auto=format&fit=crop&q=80&w=1000",
       link: "/brands#bk" 
     },
     { 
@@ -26,10 +26,10 @@ export default function Home() {
       title: "Your Eyes, Your Magic", 
       description: "High-performance products that enhance, define, and transform every gaze with precision-engineered eye artistry.", 
       buttonText: "Discover ME5", 
-      image: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=1000",
+      image: "https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&q=80&w=1000",
       link: "/brands#me5"
     }
-  ]; // 👈 Ini kurung penutup yang sebelumnya terhapus
+  ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -105,7 +105,7 @@ export default function Home() {
             {/* Brand 1: BK */}
             <div className="group cursor-pointer">
               <div className="w-full aspect-[3/4] bg-surface-container overflow-hidden mb-6">
-                <img alt="BK Cosmetics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&q=80&w=1000" />
+                <img alt="BK Cosmetics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&q=80&w=1000" />
               </div>
               <h3 className="font-serif text-2xl md:text-3xl font-medium text-primary mb-2">BK Cosmetics</h3>
               <p className="text-base text-on-surface-variant mb-6">Precision engineered artistry.</p>
@@ -138,11 +138,15 @@ export default function Home() {
       {/* CORPORATE PHILOSOPHY */}
       <section className="py-16 md:py-24 px-6 md:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-          <div className="md:col-span-6 relative h-[400px] md:h-[819px]">
-            <ScrollReveal>
-              <img alt="Architecture" className="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000" />
+          
+          {/* 👇 BAGIAN INI YANG DIPERBAIKI 👇 */}
+          <div className="md:col-span-6 h-[400px] md:h-[819px]">
+            <ScrollReveal className="w-full h-full">
+              <img alt="Architecture" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" />
             </ScrollReveal>
           </div>
+          {/* 👆 ======================= 👆 */}
+
           <div className="md:col-span-5 md:col-start-8 flex flex-col justify-center">
             <ScrollReveal delay={150}>
               <h2 className="font-serif text-3xl md:text-5xl font-medium leading-tight text-primary mb-6">Corporate Philosophy</h2>
