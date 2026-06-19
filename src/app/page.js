@@ -42,8 +42,9 @@ export default function Home() {
     <main className="pt-24 pb-16 md:pb-24 flex-grow">
       {/* HERO SECTION */}
       <section className="w-full relative overflow-hidden pb-12 md:pb-24">
-        <div className="absolute top-0 left-0 bottom-0 w-12 md:w-32 z-20 pointer-events-none bg-gradient-to-r from-surface to-transparent backdrop-blur-[3px]"></div>
-        <div className="absolute top-0 right-0 bottom-0 w-12 md:w-32 z-20 pointer-events-none bg-gradient-to-l from-surface to-transparent backdrop-blur-[3px]"></div>
+        {/* 👇 Tambahkan hidden md:block agar blur hilang di HP 👇 */}
+        <div className="hidden md:block absolute top-0 left-0 bottom-0 w-32 z-20 pointer-events-none bg-gradient-to-r from-surface to-transparent backdrop-blur-[3px]"></div>
+        <div className="hidden md:block absolute top-0 right-0 bottom-0 w-32 z-20 pointer-events-none bg-gradient-to-l from-surface to-transparent backdrop-blur-[3px]"></div>
 
         <div className="flex transition-transform duration-1000 ease-[cubic-bezier(0.65,0,0.35,1)]" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
           {heroSlides.map((slide, index) => (

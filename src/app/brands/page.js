@@ -44,8 +44,8 @@ export default function BrandsPage() {
             {/* Overlapping Dark Card (Kotak Hitam Menimpa Gambar) */}
             <div className="static md:absolute md:-bottom-10 md:right-8 w-full md:w-[460px] bg-primary text-white p-8 md:shadow-2xl z-20 mt-6 md:mt-0">
               <p className="font-serif text-lg leading-relaxed text-gray-200 mb-8">
-  &quot;We do not just follow trends; we engineer the future of beauty. A curated portfolio designed to empower every expression.&quot;
-</p>
+                &quot;We do not just follow trends; we engineer the future of beauty. A curated portfolio designed to empower every expression.&quot;
+              </p>
               <div className="flex justify-between items-end border-t border-white/20 pt-6">
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-gold">Our Directory</span>
                 <div className="flex items-center gap-6">
@@ -61,9 +61,9 @@ export default function BrandsPage() {
 
             {/* Tags (Di bawah gambar, di sebelah kiri kotak hitam mewakili 3 Brand) */}
             <div className="flex flex-wrap gap-3 mt-6 md:mt-8 md:max-w-[50%]">
-              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">Vivid Expressions</span>
-              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">Precision Tech</span>
-              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">Botanical Heritage</span>
+              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">New Generation</span>
+              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">Eye Artistry</span>
+              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">Professional Glamor</span>
             </div>
           </div>
 
@@ -79,11 +79,13 @@ export default function BrandsPage() {
               <span className="font-serif text-3xl md:text-4xl block mb-2">BK</span>
               <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">New Generation Beauty</span>
               <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">Be Kind.<br />Be Kool.<br />Be You.</h2>
-              <p className="text-base text-on-surface-variant mb-8 max-w-md">A vibrant celebration of individuality. BK breaks the mold with highly pigmented, playful formulas designed for the unapologetic creator.</p>
+              <p className="text-base text-on-surface-variant mb-8 max-w-md">
+                A beauty universe made for the new generation. From lips to skin, nails to everyday self-care, BK brings together different beauty brands with one shared spirit. Here, you are free to try new colors, discover new textures, and build your own beauty story.
+              </p>
               <div className="flex flex-wrap gap-3 mb-10">
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Cruelty-Free</span>
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Vivid Pigments</span>
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Gen-Z</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Colorful</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Personal</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Fun</span>
               </div>
               <a href="https://bkcosmetics.idn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-primary hover:border-muted-gold">
                 Explore BK Collection <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -98,10 +100,10 @@ export default function BrandsPage() {
                 </div>
                 <div className="col-span-1 flex flex-col gap-4">
                   <div className="h-[200px] md:h-[290px] rounded overflow-hidden group">
-                    <img alt="BK Product" className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&q=80&w=1000" />
+                    <img alt="BK Product" className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1571781526291-c477ebfd024b?auto=format&fit=crop&q=80&w=1000" />
                   </div>
                   <div className="h-[200px] md:h-[290px] rounded bg-surface-container-high p-6 flex items-center justify-center">
-                    <span className="font-serif text-2xl text-center italic opacity-80">&quot;Color without compromise.&quot;</span>
+                    <span className="font-serif text-2xl text-center italic opacity-80">&quot;Beauty is never limited.&quot;</span>
                   </div>
                 </div>
               </div>
@@ -118,26 +120,18 @@ export default function BrandsPage() {
               <img alt="ME5 Artistry" className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=1000" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent"></div>
               <div className="absolute bottom-8 left-8">
-                <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-widest border border-white/30">Precision Tech</span>
+                <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-widest border border-white/30">Eye Artistry</span>
               </div>
             </ScrollReveal>
           </div>
           <div className="md:col-span-5 md:col-start-8">
             <ScrollReveal delay={200}>
               <span className="font-serif text-3xl md:text-4xl block mb-2">ME5</span>
-              <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">Magic Eye Makeup</span>
-              <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">High-Performance<br />Artistry.</h2>
-              <p className="text-base text-on-surface-variant mb-8 max-w-md">Engineered for the most demanding environments. ME5 combines cutting-edge cosmetic technology with intense, long-lasting wear.</p>
-              <ul className="space-y-4 mb-10 border-l border-outline-variant pl-6">
-                <li>
-                  <h4 className="text-xs font-semibold uppercase tracking-widest mb-1">Micro-Precision Pens</h4>
-                  <p className="text-sm text-on-surface-variant">0.1mm tips for architectural line work.</p>
-                </li>
-                <li>
-                  <h4 className="text-xs font-semibold uppercase tracking-widest mb-1">24H Bonding Technology</h4>
-                  <p className="text-sm text-on-surface-variant">Smudge-proof formulations engineered for endurance.</p>
-                </li>
-              </ul>
+              <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">Dedicated to the Art of Eye Makeup</span>
+              <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">Your Eyes,<br />Your Magic,<br />Your ME5.</h2>
+              <p className="text-base text-on-surface-variant mb-10 max-w-md">
+                Inspired by the power and mystery of the eyes, we create high-performance products that enhance, define, and transform every gaze. ME5 combines cutting-edge technology with richly pigmented formulas to deliver long-lasting, expressive, and effortless eye artistry.
+              </p>
               <a href="https://me5.idn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-primary hover:border-muted-gold">
                 Discover ME5 Technology <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
@@ -152,13 +146,15 @@ export default function BrandsPage() {
           <div className="md:col-span-5 order-2 md:order-1">
             <ScrollReveal>
               <span className="font-serif text-3xl md:text-4xl block mb-2">AG</span>
-              <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">Heritage Botanical Fragrances</span>
-              <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">The Essence<br />of Nature.</h2>
-              <p className="text-base text-on-surface-variant mb-8 max-w-md">Crafted from the world's finest botanicals, AG brings a timeless, organic touch to modern perfumery. Scent profiles that linger as elegant memories.</p>
+              <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">Angela Glamor</span>
+              <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">Flawless Skin.<br />Polished Nails.<br />Professional Glamor.</h2>
+              <p className="text-base text-on-surface-variant mb-8 max-w-md">
+                A professional beauty brand dedicated to flawless base makeup and salon-grade nail artistry. Created for modern beauty lovers and professionals, AG believes glamour starts with a perfected complexion and ends with polished details.
+              </p>
               <div className="flex flex-wrap gap-3 mb-10">
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Artisanal</span>
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Vegan</span>
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Sustainable</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Base Makeup</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Nail Artistry</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Elegance</span>
               </div>
               <a href="https://ag.idn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-primary hover:border-muted-gold">
                 Explore AG Fragrance <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -168,7 +164,7 @@ export default function BrandsPage() {
           <div className="md:col-span-7 order-1 md:order-2">
             <ScrollReveal delay={200}>
               <div className="w-full h-[500px] md:h-[700px] rounded overflow-hidden group relative">
-                <img alt="AG Fragrance Bottle" className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&q=80&w=1000" />
+                <img alt="AG Beauty Details" className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&q=80&w=1000" />
                 <div className="absolute inset-0 border-[16px] border-surface z-10 pointer-events-none"></div>
               </div>
             </ScrollReveal>
