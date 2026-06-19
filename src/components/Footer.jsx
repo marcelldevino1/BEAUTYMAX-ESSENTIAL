@@ -25,7 +25,7 @@ export default function Footer() {
             <h4 className="text-xs font-semibold uppercase tracking-widest text-muted-gold mb-2">Connect</h4>
             <a className="text-sm text-on-surface-variant hover:text-muted-gold transition-colors w-max" href="https://instagram.com/bkcosmetics.idn" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a className="text-sm text-on-surface-variant hover:text-muted-gold transition-colors w-max" href="https://tiktok.com/@bkcosmetics.idn" target="_blank" rel="noopener noreferrer">TikTok</a>
-            <a className="text-sm text-on-surface-variant hover:text-muted-gold transition-colors w-max" href="mailto:helpbeautymaxid@gmail.com">helpbeautymaxid@gmail.com</a>
+            <a className="text-sm text-on-surface-variant hover:text-muted-gold transition-colors w-max" href="mailto:help@jk.beautymaxid.com">help@jk.beautymaxid.com</a>
           </div>
         </div>
       </footer>

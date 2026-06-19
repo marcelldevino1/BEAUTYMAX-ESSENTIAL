@@ -61,7 +61,7 @@ export default function ContactPage() {
           <ScrollReveal>
             <div className="flex flex-col gap-2 group cursor-pointer">
               <h3 className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant">Direct Correspondence</h3>
-              <a className="font-serif text-2xl md:text-3xl text-primary hover:text-muted-gold transition-colors break-all" href="mailto:helpbeautymaxid@gmail.com">helpbeautymaxid@gmail.com</a>
+              <a className="font-serif text-2xl md:text-3xl text-primary hover:text-muted-gold transition-colors break-all" href="mailto:help@jk.beautymaxid.com">help@jk.beautymaxid.com</a>
             </div>
           </ScrollReveal>
 
