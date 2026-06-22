@@ -56,7 +56,7 @@ export default function ContactPage() {
       </ScrollReveal>
 
       <section className="px-6 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
-        {/* Sisi Kiri: Kontak Informasi */}
+        {/* Sisi Kiri: Kontak Informasi (Hanya Email & Sosmed Sesuai Brief) */}
         <div className="md:col-span-5 flex flex-col gap-12 border-b border-outline-variant md:border-b-0 pb-12 md:pb-0">
           <ScrollReveal>
             <div className="flex flex-col gap-2 group cursor-pointer">
@@ -77,21 +77,6 @@ export default function ContactPage() {
                   <span className="w-8 h-8 rounded-full bg-soft-beige/30 flex items-center justify-center"><span className="material-symbols-outlined text-[16px]">play_circle</span></span>
                   TikTok (@bkcosmetics.idn)
                 </a>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={200}>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant">Global Presence</h3>
-              <div className="bg-surface-container-low p-8 relative overflow-hidden group rounded-DEFAULT">
-                <div className="absolute inset-0 opacity-20 transition-opacity duration-700 group-hover:opacity-40" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1000')", backgroundSize: "cover", backgroundPosition: "center" }}></div>
-                <div className="relative z-10">
-                  <p className="text-sm text-primary mb-4">Our offices are strategically positioned in key beauty capitals worldwide, ensuring unparalleled service and market insight.</p>
-                  <Link className="text-xs font-semibold uppercase tracking-widest text-muted-gold border-b border-muted-gold pb-1 hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-2" href="#">
-                    View Office Locations <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                  </Link>
-                </div>
               </div>
             </div>
           </ScrollReveal>

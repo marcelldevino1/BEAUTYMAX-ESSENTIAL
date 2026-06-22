@@ -20,7 +20,7 @@ export default function BrandsPage() {
             </div>
             <div className="md:col-span-5 flex flex-col gap-8 md:pt-4">
               <p className="text-base md:text-lg text-on-surface-variant leading-relaxed">
-                Discover our house of distinguished brands. Each meticulously crafted to serve a unique aesthetic, united by our commitment to uncompromising quality.
+                With a growing portfolio of brands including ME5, BK Cosmetics, and AG, Beautymax Essential offers a comprehensive range of products designed to meet the evolving needs of modern consumers.
               </p>
               <div className="flex flex-wrap items-center gap-6">
                 <a href="#bk" className="bg-primary text-white text-xs font-semibold uppercase tracking-widest px-8 py-4 hover:bg-muted-gold transition-colors">
@@ -44,7 +44,7 @@ export default function BrandsPage() {
             {/* Overlapping Dark Card (Kotak Hitam Menimpa Gambar) */}
             <div className="static md:absolute md:-bottom-10 md:right-8 w-full md:w-[460px] bg-primary text-white p-8 md:shadow-2xl z-20 mt-6 md:mt-0">
               <p className="font-serif text-lg leading-relaxed text-gray-200 mb-8">
-                &quot;We do not just follow trends; we engineer the future of beauty. A curated portfolio designed to empower every expression.&quot;
+                &quot;We believe beauty is not limited to appearance, but is a form of self-expression and personal empowerment.&quot;
               </p>
               <div className="flex justify-between items-end border-t border-white/20 pt-6">
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-gold">Our Directory</span>
@@ -133,7 +133,7 @@ export default function BrandsPage() {
                 Inspired by the power and mystery of the eyes, we create high-performance products that enhance, define, and transform every gaze. ME5 combines cutting-edge technology with richly pigmented formulas to deliver long-lasting, expressive, and effortless eye artistry.
               </p>
               <a href="https://me5.idn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-primary hover:border-muted-gold">
-                Discover ME5 Technology <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                Discover ME5 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </ScrollReveal>
           </div>
@@ -157,7 +157,7 @@ export default function BrandsPage() {
                 <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Elegance</span>
               </div>
               <a href="https://ag.idn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-primary hover:border-muted-gold">
-                Explore AG Fragrance <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                Explore AG Collection <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </ScrollReveal>
           </div>

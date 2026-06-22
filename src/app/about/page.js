@@ -12,12 +12,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
             <div className="md:col-span-8">
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
-                Beauty is an unapologetic form of self-expression.
+                Beauty for Every Expression.
               </h1>
             </div>
             <div className="md:col-span-4 pb-4">
               <p className="text-lg leading-relaxed text-on-surface-variant">
-                We believe that true elegance lies in authenticity. Our heritage is built on providing the essential tools to help you articulate your unique identity to the world.
+                Beautymax Essential is a dynamic beauty company built on one belief: beauty should be accessible, expressive, and empowering for everyone.
               </p>
             </div>
           </div>
@@ -41,11 +41,11 @@ export default function AboutPage() {
           <div className="md:col-span-6 md:col-start-7 order-1 md:order-2">
             <ScrollReveal>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-muted-gold mb-4 border-b border-muted-gold pb-1">Our Story</span>
-              <h2 className="font-serif text-3xl md:text-5xl font-medium leading-tight mb-8">From singular cosmetics to universal beauty staples.</h2>
+              <h2 className="font-serif text-3xl md:text-5xl font-medium leading-tight mb-8">A platform for brands to grow and ideas to flourish.</h2>
               <div className="space-y-6 text-base text-on-surface-variant leading-relaxed">
-                <p>What began as a curated collection of foundational color cosmetics has evolved into a comprehensive philosophy. BEAUTYMAX ESSENTIAL was founded on a simple premise: the best products don&apos;t mask who you are; they reveal it.</p>
-                <p>Over the decades, we have refined our formulations, stripping away the unnecessary to focus purely on performance, texture, and wear. We are meticulous in our craftsmanship, ensuring every staple we offer meets the rigorous demands of professional artists and beauty purists alike.</p>
-                <p>Today, we are recognized globally not just for what we make, but for what we stand for—a commitment to uncompromised quality and the quiet confidence it inspires.</p>
+                <p>We create high-quality beauty solutions that celebrate individuality, creativity, and everyday confidence across diverse lifestyles and generations. With a growing portfolio of brands including ME5, BK Cosmetics, and AG, Beautymax Essential offers a comprehensive range of products spanning from nail polish to full-spectrum cosmetics.</p>
+                <p>From cosmetics to essential beauty staples, our brands are designed to meet the evolving needs of modern consumers—combining trend awareness, product performance, and thoughtful formulation.</p>
+                <p>We believe beauty is not limited to appearance, but is a form of self-expression and personal empowerment. Driven by consumer insight and market agility, we continuously innovate to deliver products that are relevant, reliable, and inspiring—whether for everyday wear or bold creative moments.</p>
               </div>
             </ScrollReveal>
           </div>
@@ -59,18 +59,18 @@ export default function AboutPage() {
             <div className="bg-surface-container-low p-10 md:p-16 flex flex-col justify-between min-h-[400px]">
               <div>
                 <span className="inline-block text-xs font-semibold uppercase tracking-widest mb-6">Vision</span>
-                <h3 className="font-serif text-2xl md:text-3xl font-medium mb-6">Empowering every individual to express their unique beauty confidently.</h3>
+                <h3 className="font-serif text-2xl md:text-3xl font-medium mb-6">Empowers every individual to express their unique beauty confidently.</h3>
               </div>
-              <p className="text-base text-on-surface-variant mt-auto max-w-md">We envision a world where beauty routines are not obligations, but deliberate acts of self-care and self-definition.</p>
+              <p className="text-base text-on-surface-variant mt-auto max-w-md">And to continuously shape diverse, trend-forward, and people-centric beauty experiences for all lifestyles and generations.</p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="bg-soft-beige p-10 md:p-16 flex flex-col justify-between min-h-[400px]">
               <div>
                 <span className="inline-block text-xs font-semibold uppercase tracking-widest mb-6">Mission</span>
-                <h3 className="font-serif text-2xl md:text-3xl font-medium mb-6">Delivering high-quality, innovative, and reliable beauty solutions.</h3>
+                <h3 className="font-serif text-2xl md:text-3xl font-medium mb-6">Deliver high-quality, innovative, and reliable beauty solutions.</h3>
               </div>
-              <p className="text-base text-on-surface-variant mt-auto max-w-md">Our mission is to engineer products that perform flawlessly. By combining cutting-edge innovation with timeless aesthetic principles.</p>
+              <p className="text-base text-on-surface-variant mt-auto max-w-md">By capturing real consumer insights and keeping pace with market trends, we create accessible and empowering beauty products that celebrate individuality and self-expression.</p>
             </div>
           </ScrollReveal>
         </div>
@@ -83,14 +83,13 @@ export default function AboutPage() {
             <div className="md:col-span-5">
               <ScrollReveal>
                 <span className="inline-block text-xs font-semibold uppercase tracking-widest text-muted-gold mb-4">Our Commitment</span>
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-8">Sustainable value and responsible brand development.</h2>
-                <p className="text-base text-gray-300 mb-10 max-w-md">Luxury must be responsible. We are dedicated to transparent sourcing, reducing our environmental footprint, and developing packaging that respects the planet without compromising on elegance.</p>
-                {/* 👇 Rute diupdate ke /sustainability 👇 */}
+                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight mb-8">Fueled by purpose and people.</h2>
+                <p className="text-base text-gray-300 mb-10 max-w-md">We grow purposefully alongside our brands, talents, and partners. We are committed to building brands responsibly, nurturing talent, and creating sustainable long-term value for consumers, communities, and all stakeholders.</p>
                 <Link 
                 className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-white hover:border-muted-gold" 
                 href="/contact"
                 >
-                Discuss Our Commitment <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                Connect With Us <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
               </ScrollReveal>
             </div>

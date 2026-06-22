@@ -16,15 +16,15 @@ export default function Home() {
     { 
       label: "New Generation", 
       title: "Be Kind. Be Kool. Be You.", 
-      description: "BK brings together different beauty brands with one shared spirit. A space for every side of you to explore, play, and express.", 
+      description: "BK is a beauty universe made for the new generation. A way to explore, to play, and to express who you are in every moment.", 
       buttonText: "Discover BK", 
       image: "https://images.unsplash.com/photo-1512496015851-a1dc8a477d5d?auto=format&fit=crop&q=80&w=1000",
       link: "/brands#bk" 
     },
     { 
       label: "Eye Artistry", 
-      title: "Your Eyes, Your Magic", 
-      description: "High-performance products that enhance, define, and transform every gaze with precision-engineered eye artistry.", 
+      title: "Your Eyes, Your Magic, Your ME5.", 
+      description: "Dedicated to the art of eye makeup. Inspired by the power and mystery of the eyes, we create high-performance products that enhance, define, and transform every gaze.", 
       buttonText: "Discover ME5", 
       image: "https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&q=80&w=1000",
       link: "/brands#me5"
@@ -42,7 +42,6 @@ export default function Home() {
     <main className="pt-24 pb-16 md:pb-24 flex-grow">
       {/* HERO SECTION */}
       <section className="w-full relative overflow-hidden pb-12 md:pb-24">
-        {/* 👇 Tambahkan hidden md:block agar blur hilang di HP 👇 */}
         <div className="hidden md:block absolute top-0 left-0 bottom-0 w-32 z-20 pointer-events-none bg-gradient-to-r from-surface to-transparent backdrop-blur-[3px]"></div>
         <div className="hidden md:block absolute top-0 right-0 bottom-0 w-32 z-20 pointer-events-none bg-gradient-to-l from-surface to-transparent backdrop-blur-[3px]"></div>
 
@@ -75,13 +74,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OUR MISSION */}
+      {/* VISION & MISSION */}
       <ScrollReveal>
         <section className="bg-surface-container-low py-16 md:py-24 px-6 md:px-16">
           <div className="max-w-7xl mx-auto text-center flex flex-col items-center">
-            <span className="inline-block px-4 py-1 rounded-full bg-soft-beige text-primary text-xs font-semibold uppercase tracking-widest mb-8">Our Purpose</span>
-            <h2 className="font-serif text-3xl md:text-5xl font-medium leading-tight text-primary max-w-3xl mb-6">Our Mission</h2>
-            <p className="text-lg leading-relaxed text-on-surface-variant max-w-2xl">Empowering individuality through high-quality, meticulously crafted beauty solutions that celebrate the unique essence of every individual.</p>
+            <span className="inline-block px-4 py-1 rounded-full bg-soft-beige text-primary text-xs font-semibold uppercase tracking-widest mb-8">Vision & Mission</span>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-primary max-w-4xl mb-6">Empowers every individual to express their unique beauty confidently.</h2>
+            <p className="text-base md:text-lg leading-relaxed text-on-surface-variant max-w-3xl mb-4">We deliver high-quality, innovative, and reliable beauty solutions that blend professional performance with thoughtful formulation. By capturing real consumer insights and keeping pace with market trends, we create accessible and empowering beauty products that celebrate individuality and self-expression.</p>
+            <p className="text-base md:text-lg leading-relaxed text-on-surface-variant max-w-3xl">We grow purposefully alongside our brands, talents, and partners, pursue responsible brand development, and create sustainable long-term value for consumers, communities, and all stakeholders.</p>
           </div>
         </section>
       </ScrollReveal>
@@ -108,8 +108,8 @@ export default function Home() {
               <div className="w-full aspect-[3/4] bg-surface-container overflow-hidden mb-6">
                 <img alt="BK Cosmetics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&q=80&w=1000" />
               </div>
-              <h3 className="font-serif text-2xl md:text-3xl font-medium text-primary mb-2">BK Cosmetics</h3>
-              <p className="text-base text-on-surface-variant mb-6">Precision engineered artistry.</p>
+              <h3 className="font-serif text-2xl md:text-3xl font-medium text-primary mb-2">BK</h3>
+              <p className="text-base text-on-surface-variant mb-6">Be Kind. Be Kool. Be You.</p>
               <Link href="/brands#bk" className="inline-block border border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-2 hover:bg-muted-gold hover:border-muted-gold hover:text-white transition-all duration-300">Discover</Link>
             </div>
             
@@ -119,7 +119,7 @@ export default function Home() {
                 <img alt="ME5 Skincare" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=1000" />
               </div>
               <h3 className="font-serif text-2xl md:text-3xl font-medium text-primary mb-2">ME5</h3>
-              <p className="text-base text-on-surface-variant mb-6">Advanced dermal vitality.</p>
+              <p className="text-base text-on-surface-variant mb-6">Your Eyes, Your Magic, Your ME5.</p>
               <Link href="/brands#me5" className="inline-block border border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-2 hover:bg-muted-gold hover:border-muted-gold hover:text-white transition-all duration-300">Discover</Link>
             </div>
             
@@ -129,33 +129,32 @@ export default function Home() {
                 <img alt="AG Fragrance" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=1000" />
               </div>
               <h3 className="font-serif text-2xl md:text-3xl font-medium text-primary mb-2">AG</h3>
-              <p className="text-base text-on-surface-variant mb-6">Heritage botanical fragrances.</p>
+              <p className="text-base text-on-surface-variant mb-6">Flawless Skin. Polished Nails.</p>
               <Link href="/brands#ag" className="inline-block border border-primary text-primary text-xs font-semibold uppercase tracking-widest px-6 py-2 hover:bg-muted-gold hover:border-muted-gold hover:text-white transition-all duration-300">Discover</Link>
             </div>
           </div>
         </ScrollReveal>
       </section>
 
-      {/* CORPORATE PHILOSOPHY */}
+      {/* ABOUT US */}
       <section className="py-16 md:py-24 px-6 md:px-16 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           
-          {/* 👇 BAGIAN INI YANG DIPERBAIKI 👇 */}
           <div className="md:col-span-6 h-[400px] md:h-[819px]">
             <ScrollReveal className="w-full h-full">
               <img alt="Architecture" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000" />
             </ScrollReveal>
           </div>
-          {/* 👆 ======================= 👆 */}
 
           <div className="md:col-span-5 md:col-start-8 flex flex-col justify-center">
             <ScrollReveal delay={150}>
-              <h2 className="font-serif text-3xl md:text-5xl font-medium leading-tight text-primary mb-6">Corporate Philosophy</h2>
-              <p className="text-lg leading-relaxed text-on-surface-variant mb-6">At the core of Beautymax Essential lies a relentless drive for innovation paired with an unwavering commitment to quality. We do not just follow trends; we engineer the future of beauty.</p>
-              <p className="text-base leading-relaxed text-on-surface-variant mb-8">Our laboratories and creative studios work in strict unison to ensure that every product passing through our global supply chain meets a standard of quiet luxury—substantive, effective, and ethically sound.</p>
+              <h2 className="font-serif text-3xl md:text-5xl font-medium leading-tight text-primary mb-6">About Us</h2>
+              <p className="text-base leading-relaxed text-on-surface-variant mb-4">Beautymax Essential is a dynamic beauty company built on one belief: beauty should be accessible, expressive, and empowering for everyone. We create high-quality beauty solutions that celebrate individuality, creativity, and everyday confidence across diverse lifestyles and generations.</p>
+              <p className="text-base leading-relaxed text-on-surface-variant mb-4">We believe beauty is not limited to appearance, but is a form of self-expression and personal empowerment. Driven by consumer insight and market agility, we continuously innovate to deliver products that are relevant, reliable, and inspiring.</p>
+              <p className="text-base leading-relaxed text-on-surface-variant mb-8">At Beautymax Essential, growth is fueled by purpose and people. We are more than a beauty company—a platform for brands to grow, ideas to flourish, and beauty to reach its fullest potential.</p>
               <div className="border-t border-outline-variant pt-8">
                 <Link className="text-xs font-semibold uppercase tracking-widest text-primary hover:text-muted-gold flex items-center gap-2" href="/about">
-                  Read Our Full Philosophy <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  Read Our Story <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </Link>
               </div>
             </ScrollReveal>
