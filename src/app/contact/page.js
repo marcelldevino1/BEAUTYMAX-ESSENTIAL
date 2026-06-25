@@ -44,37 +44,48 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="flex-grow pt-[120px] md:pt-[160px] pb-16 md:pb-24">
+    <main className="flex-grow pt-32 md:pt-40 pb-16 md:pb-24 bg-surface">
       <ScrollReveal>
         <section className="px-6 md:px-16 max-w-7xl mx-auto mb-16 md:mb-24">
           <div className="flex flex-col items-start gap-4 max-w-3xl">
             <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold">Inquiries & Support</span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">Reach Out to Excellence.</h1>
-            <p className="text-lg text-on-surface-variant mt-4 max-w-xl">Whether you have questions about our formulations, wish to discuss global partnerships, or require personalized assistance, our dedicated team is at your service.</p>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.05] text-primary">
+              Reach Out to<br/>Excellence.
+            </h1>
+            <p className="text-base md:text-lg text-on-surface-variant mt-4 max-w-xl leading-relaxed">
+              Whether you wish to discuss global OEM/ODM manufacturing partnerships, have questions about our proprietary brands, or require personalized assistance, our dedicated team is at your service.
+            </p>
           </div>
         </section>
       </ScrollReveal>
 
-      <section className="px-6 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
-        {/* Sisi Kiri: Kontak Informasi (Hanya Email & Sosmed Sesuai Brief) */}
-        <div className="md:col-span-5 flex flex-col gap-12 border-b border-outline-variant md:border-b-0 pb-12 md:pb-0">
+      <section className="px-6 md:px-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
+        
+        {/* Sisi Kiri: Kontak Informasi */}
+        <div className="md:col-span-5 flex flex-col gap-12 border-b border-outline-variant/50 md:border-b-0 pb-12 md:pb-0">
           <ScrollReveal>
-            <div className="flex flex-col gap-2 group cursor-pointer">
+            <div className="flex flex-col gap-4 group cursor-pointer">
               <h3 className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant">Direct Correspondence</h3>
-              <a className="font-serif text-2xl md:text-3xl text-primary hover:text-muted-gold transition-colors break-all" href="mailto:help@jk.beautymaxid.com">help@jk.beautymaxid.com</a>
+              <a className="font-serif text-2xl md:text-3xl lg:text-4xl text-primary hover:text-muted-gold transition-colors break-all" href="mailto:help@jk.beautymaxid.com">
+                help@jk.beautymaxid.com
+              </a>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-6">
               <h3 className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant">Digital Presence</h3>
-              <div className="flex flex-col gap-2">
-                <a className="text-lg text-primary hover:text-muted-gold transition-colors flex items-center gap-3" href="https://www.instagram.com/bkcosmetics.idn/" target="_blank" rel="noopener noreferrer">
-                  <span className="w-8 h-8 rounded-full bg-soft-beige/30 flex items-center justify-center"><span className="material-symbols-outlined text-[16px]">photo_camera</span></span>
+              <div className="flex flex-col gap-4">
+                <a className="text-base md:text-lg text-primary hover:text-muted-gold transition-colors flex items-center gap-4 group" href="https://www.instagram.com/bkcosmetics.idn/" target="_blank" rel="noopener noreferrer">
+                  <span className="w-10 h-10 rounded-sm bg-surface-container-low border border-outline-variant/40 flex items-center justify-center group-hover:border-muted-gold transition-colors">
+                    <span className="material-symbols-outlined text-[18px]">photo_camera</span>
+                  </span>
                   Instagram (@bkcosmetics.idn)
                 </a>
-                <a className="text-lg text-primary hover:text-muted-gold transition-colors flex items-center gap-3" href="https://www.tiktok.com/@bkcosmetics.idn" target="_blank" rel="noopener noreferrer">
-                  <span className="w-8 h-8 rounded-full bg-soft-beige/30 flex items-center justify-center"><span className="material-symbols-outlined text-[16px]">play_circle</span></span>
+                <a className="text-base md:text-lg text-primary hover:text-muted-gold transition-colors flex items-center gap-4 group" href="https://www.tiktok.com/@bkcosmetics.idn" target="_blank" rel="noopener noreferrer">
+                  <span className="w-10 h-10 rounded-sm bg-surface-container-low border border-outline-variant/40 flex items-center justify-center group-hover:border-muted-gold transition-colors">
+                    <span className="material-symbols-outlined text-[18px]">play_circle</span>
+                  </span>
                   TikTok (@bkcosmetics.idn)
                 </a>
               </div>
@@ -82,71 +93,71 @@ export default function ContactPage() {
           </ScrollReveal>
         </div>
 
-        {/* Sisi Kanan: Formulir Fungsional */}
+        {/* Sisi Kanan: Formulir Fungsional (Flat Editorial Design) */}
         <div className="md:col-span-7">
           <ScrollReveal delay={300}>
-            <div className="bg-surface-container-lowest p-0 md:p-8 md:rounded-DEFAULT shadow-sm border border-outline-variant/20">
-              <h2 className="font-serif text-3xl md:text-4xl font-medium text-primary mb-8">Send an Inquiry</h2>
+            <div className="bg-surface-container-lowest p-0 md:p-12 md:rounded-sm md:border border-outline-variant/40">
+              <h2 className="font-serif text-3xl md:text-4xl font-medium text-primary mb-10">Send an Inquiry</h2>
               
               {/* Notifikasi Sukses / Gagal */}
               {status.success && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-800 text-sm rounded">
+                <div className="mb-8 p-4 bg-green-50 border-l-2 border-green-500 text-green-800 text-sm">
                   Thank you! Your message has been sent successfully. We will get back to you shortly.
                 </div>
               )}
               {status.error && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-800 text-sm rounded">
+                <div className="mb-8 p-4 bg-red-50 border-l-2 border-red-500 text-red-800 text-sm">
                   {status.error}
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10">
                   <div className="relative group">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant block mb-2 group-focus-within:text-primary" htmlFor="name">Full Name</label>
+                    <label className="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant block mb-2 group-focus-within:text-muted-gold transition-colors" htmlFor="name">Full Name</label>
                     <input 
-                      className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary transition-colors placeholder:text-surface-tint outline-none" 
-                      id="name" name="name" type="text" placeholder="Jane Doe" 
+                      className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-muted-gold focus:ring-0 px-0 py-2 text-primary transition-colors placeholder:text-outline-variant outline-none" 
+                      id="name" name="name" type="text" placeholder="e.g. Jane Doe" 
                       value={formData.name} onChange={handleChange} disabled={status.loading}
                     />
                   </div>
                   <div className="relative group">
-                    <label className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant block mb-2 group-focus-within:text-primary" htmlFor="email">Email Address</label>
+                    <label className="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant block mb-2 group-focus-within:text-muted-gold transition-colors" htmlFor="email">Email Address</label>
                     <input 
-                      className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary transition-colors placeholder:text-surface-tint outline-none" 
-                      id="email" name="email" type="email" placeholder="jane@example.com" 
+                      className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-muted-gold focus:ring-0 px-0 py-2 text-primary transition-colors placeholder:text-outline-variant outline-none" 
+                      id="email" name="email" type="email" placeholder="e.g. jane@company.com" 
                       value={formData.email} onChange={handleChange} disabled={status.loading}
                     />
                   </div>
                 </div>
 
                 <div className="relative group">
-                  <label className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant block mb-2 group-focus-within:text-primary" htmlFor="subject">Inquiry Subject</label>
+                  <label className="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant block mb-2 group-focus-within:text-muted-gold transition-colors" htmlFor="subject">Inquiry Subject</label>
                   <select 
-                    className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary transition-colors appearance-none cursor-pointer outline-none" 
+                    className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-muted-gold focus:ring-0 px-0 py-2 text-primary transition-colors appearance-none cursor-pointer outline-none" 
                     id="subject" name="subject" value={formData.subject} onChange={handleChange} disabled={status.loading}
                   >
                     <option value="" disabled>Select a topic...</option>
-                    <option value="Customer Support">Customer Support</option>
-                    <option value="Global Partnerships">Global Partnerships</option>
-                    <option value="Press & Media">Press & Media</option>
-                    <option value="Other Inquiries">Other Inquiries</option>
+                    <option value="OEM/ODM Manufacturing">OEM/ODM Manufacturing</option>
+                    <option value="Global Retail Partnerships">Global Retail Partnerships</option>
+                    <option value="Product Distribution">Product Distribution</option>
+                    <option value="General Support">General Support</option>
                   </select>
                   <span className="material-symbols-outlined absolute right-0 bottom-3 text-on-surface-variant pointer-events-none">expand_more</span>
                 </div>
 
                 <div className="relative group">
-                  <label className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant block mb-2 group-focus-within:text-primary" htmlFor="message">Your Message</label>
+                  <label className="text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant block mb-2 group-focus-within:text-muted-gold transition-colors" htmlFor="message">Your Message</label>
                   <textarea 
-                    className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 text-primary transition-colors placeholder:text-surface-tint resize-none outline-none" 
-                    id="message" name="message" placeholder="How can we assist you today?" rows="4"
+                    className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-muted-gold focus:ring-0 px-0 py-2 text-primary transition-colors placeholder:text-outline-variant resize-none outline-none" 
+                    id="message" name="message" placeholder="Please provide details about your inquiry..." rows="4"
                     value={formData.message} onChange={handleChange} disabled={status.loading}
                   ></textarea>
                 </div>
 
                 <div className="pt-4">
                   <button 
-                    className={`text-xs font-semibold uppercase tracking-widest px-10 py-4 w-full md:w-auto transition-colors flex justify-center items-center gap-2 rounded-DEFAULT border ${status.loading ? 'bg-gray-200 border-gray-200 text-gray-500 cursor-not-allowed' : 'bg-primary border-primary text-white hover:bg-muted-gold hover:border-muted-gold'}`}
+                    className={`text-xs font-semibold uppercase tracking-widest px-10 py-4 w-full md:w-auto transition-all duration-300 flex justify-center items-center gap-3 rounded-sm border ${status.loading ? 'bg-surface-container-high border-outline-variant text-on-surface-variant cursor-not-allowed' : 'bg-primary border-primary text-white hover:bg-muted-gold hover:border-muted-gold'}`}
                     type="submit"
                     disabled={status.loading}
                   >
@@ -158,6 +169,7 @@ export default function ContactPage() {
             </div>
           </ScrollReveal>
         </div>
+
       </section>
     </main>
   );

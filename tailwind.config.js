@@ -12,22 +12,25 @@ module.exports = {
         // ==========================================
         // 1. QUIET LUXURY CORE PALETTE (Art Gallery)
         // ==========================================
-        "surface": "#F9F9F7",               // Alabaster: Background utama (putih elegan, bukan putih menyilaukan)
-        "primary": "#1A1A1A",               // Onyx: Hitam tinta untuk judul, lebih mewah dari #000000
+        "surface": "#FCFCFA",               // Pearl White: Background utama yang lebih bersih dan mahal
+        "primary": "#1A1A1A",               // Deep Charcoal: Hitam tinta untuk judul, lebih mewah dari #000000
         "on-surface-variant": "#5C5C5C",    // Abu-abu elegan untuk teks paragraf agar mata tidak lelah
         "muted-gold": "#C5A880",            // Champagne Gold: Aksen mewah untuk tombol/hover
-        "surface-container-low": "#EFECE7", // Cashmere Grey: Background sekunder yang super lembut
-        "surface-container": "#EAE6E1",     // Sedikit lebih gelap dari Cashmere untuk pemisah
+        "surface-container-lowest": "#FFFFFF", 
+        "surface-container-low": "#F9F9F7", // Cashmere Grey: Background sekunder tipis
+        "surface-container": "#F5F5F2",     // Sedikit lebih gelap dari Cashmere untuk pemisah
+        "surface-container-high": "#EFEFEA",
+        "outline-variant": "#E5E5E5",       // Garis border tipis
         "primary-container": "#111111",     // Deep Onyx: Sangat gelap untuk Footer
         "soft-beige": "#E8E2DA",            // Beige premium untuk aksen kotak
         "charcoal-text": "#333333",         // Variasi gelap untuk teks alternatif
         
         // ==========================================
-        // 2. BRAND SPECIFIC ACCENTS (Sub-Identity)
+        // 2. BRAND SPECIFIC BACKGROUNDS (Soft & Luxury)
         // ==========================================
-        "brand-bk": "#E0B0B6",              // Dusty Rose: Untuk section BK (Playful Gen-Z)
-        "brand-me5": "#7C8C99",             // Slate Blue: Untuk section ME5 (Tech & Precision)
-        "brand-ag": "#6B705C",              // Olive Green: Untuk section AG (Heritage & Natural)
+        "brand-bk": "#FFF5F7",              // Soft Blush: Pink super tipis untuk background section BK
+        "brand-me5": "#FDFBF7",             // Champagne Sand: Krem super tipis untuk background section ME5
+        "brand-ag": "#F4F5F7",              // Cool Slate: Abu-abu kebiruan terang untuk background section AG
 
         // ==========================================
         // 3. LEGACY COLORS (Agar kode lamamu tidak error)
@@ -44,10 +47,8 @@ module.exports = {
         "tertiary-fixed": "#ffdbca",
         "on-primary-fixed-variant": "#474646",
         "surface-variant": "#e2e2e2",
-        "surface-container-lowest": "#ffffff",
         "secondary-fixed-dim": "#d3c4b8",
         "surface-dim": "#dadada",
-        "outline-variant": "#c4c7c7",
         "background": "#f9f9f7",
         "surface-bright": "#f9f9f7",
         "primary-fixed": "#e5e2e1",
@@ -57,7 +58,6 @@ module.exports = {
         "on-error-container": "#93000a",
         "on-surface": "#1A1A1A",
         "on-secondary-fixed": "#221a13",
-        "surface-container-high": "#e8e8e8",
         "tertiary-fixed-dim": "#e6beab",
         "inverse-on-surface": "#f0f1f1",
         "outline": "#747878",
@@ -121,4 +121,4 @@ module.exports = {
     }
   },
   plugins: [],
-};  
+};
