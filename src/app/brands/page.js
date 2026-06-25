@@ -7,20 +7,19 @@ export default function BrandsPage() {
   return (
     <main className="pt-24 flex-grow pb-16 md:pb-24">
       
-      {/* --- HERO SECTION BARU (GAYA EDITORIAL/ARSITEKTUR) --- */}
+      {/* --- HERO SECTION --- */}
       <ScrollReveal>
         <section className="pt-12 md:pt-16 pb-16 md:pb-24 px-6 md:px-16 max-w-7xl mx-auto">
           
-          {/* Header Grid: Judul di kiri, Deskripsi & Tombol di Kanan */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-12">
             <div className="md:col-span-7">
               <h1 className="font-serif text-5xl md:text-6xl lg:text-[72px] font-medium leading-[1.1] text-primary uppercase">
-                The Beauty<br />Universe.
+                Proprietary<br />Brands.
               </h1>
             </div>
             <div className="md:col-span-5 flex flex-col gap-8 md:pt-4">
               <p className="text-base md:text-lg text-on-surface-variant leading-relaxed">
-                With a growing portfolio of brands including ME5, BK Cosmetics, and AG, Beautymax Essential offers a comprehensive range of products designed to meet the evolving needs of modern consumers.
+                Nurturing a diverse portfolio of proprietary, trend-driven beauty brands. Driven by deep consumer insight and market agility, Beautymax empowers individuality across all generations and lifestyles.
               </p>
               <div className="flex flex-wrap items-center gap-6">
                 <a href="#bk" className="bg-primary text-white text-xs font-semibold uppercase tracking-widest px-8 py-4 hover:bg-muted-gold transition-colors">
@@ -30,28 +29,19 @@ export default function BrandsPage() {
             </div>
           </div>
 
-          {/* Gambar & Overlapping Card */}
           <div className="relative w-full mb-12 md:mb-20">
-            {/* Gambar Utama */}
             <div className="w-full h-[400px] md:h-[550px] overflow-hidden bg-surface-container-low relative">
-              <img 
-                alt="Brand Universe Hero" 
-                className="w-full h-full object-cover" 
-                src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=2000" 
-              />
+              <img alt="Brand Universe Hero" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=2000" />
             </div>
 
-            {/* Overlapping Dark Card (Kotak Hitam Menimpa Gambar) */}
             <div className="static md:absolute md:-bottom-10 md:right-8 w-full md:w-[460px] bg-primary text-white p-8 md:shadow-2xl z-20 mt-6 md:mt-0">
               <p className="font-serif text-lg leading-relaxed text-gray-200 mb-8">
-                &quot;We believe beauty is not limited to appearance, but is a form of self-expression and personal empowerment.&quot;
+                &quot;Empowering individuality across all generations and lifestyles.&quot;
               </p>
               <div className="flex justify-between items-end border-t border-white/20 pt-6">
                 <span className="text-[10px] font-semibold uppercase tracking-widest text-muted-gold">Our Directory</span>
                 <div className="flex items-center gap-6">
-                  {/* Penanda Identitas Korporat */}
-                  <span className="text-[10px] font-medium opacity-60 font-mono tracking-widest uppercase">Est. 2026</span>
-                  {/* Functional Scroll Down Button */}
+                  <span className="text-[10px] font-medium opacity-60 font-mono tracking-widest uppercase">Est. 2002</span>
                   <a href="#bk" className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-muted-gold hover:border-muted-gold transition-all duration-300 cursor-pointer bg-white text-primary hover:text-white">
                     <span className="material-symbols-outlined text-[16px] animate-bounce mt-1">arrow_downward</span>
                   </a>
@@ -59,14 +49,12 @@ export default function BrandsPage() {
               </div>
             </div>
 
-            {/* Tags (Di bawah gambar, di sebelah kiri kotak hitam mewakili 3 Brand) */}
             <div className="flex flex-wrap gap-3 mt-6 md:mt-8 md:max-w-[50%]">
-              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">New Generation</span>
-              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">Eye Artistry</span>
-              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-white transition-colors cursor-default">Professional Glamor</span>
+              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary cursor-default">Trend-Driven</span>
+              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary cursor-default">Global Standard</span>
+              <span className="px-5 py-2 rounded-full border border-outline-variant text-[10px] font-semibold uppercase tracking-widest text-primary cursor-default">Accessible</span>
             </div>
           </div>
-
         </section>
       </ScrollReveal>
 
@@ -76,16 +64,16 @@ export default function BrandsPage() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5 order-2 md:order-1">
             <ScrollReveal>
-              <span className="font-serif text-3xl md:text-4xl block mb-2">BK</span>
+              <span className="font-serif text-3xl md:text-4xl block mb-2">BK Cosmetics</span>
               <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">New Generation Beauty</span>
               <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">Be Kind.<br />Be Kool.<br />Be You.</h2>
               <p className="text-base text-on-surface-variant mb-8 max-w-md">
-                A beauty universe made for the new generation. From lips to skin, nails to everyday self-care, BK brings together different beauty brands with one shared spirit. Here, you are free to try new colors, discover new textures, and build your own beauty story.
+                A vibrant beauty universe tailored for the new generation. Encompassing three core lines—BUTYKISS, BUTYKOOL, and BUTYKLEAN—BK breaks traditional boundaries to offer a diverse, playful range across lips, skin, nails, and everyday self-care.
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Colorful</span>
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Personal</span>
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Fun</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">BUTYKISS</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">BUTYKOOL</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">BUTYKLEAN</span>
               </div>
               <a href="https://bkcosmetics.idn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-primary hover:border-muted-gold">
                 Explore BK Collection <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -103,7 +91,7 @@ export default function BrandsPage() {
                     <img alt="BK Product" className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1571781526291-c477ebfd024b?auto=format&fit=crop&q=80&w=1000" />
                   </div>
                   <div className="h-[200px] md:h-[290px] rounded bg-surface-container-high p-6 flex items-center justify-center">
-                    <span className="font-serif text-2xl text-center italic opacity-80">&quot;Beauty is never limited.&quot;</span>
+                    <span className="font-serif text-2xl text-center italic opacity-80">&quot;Vibrant & Playful&quot;</span>
                   </div>
                 </div>
               </div>
@@ -120,17 +108,17 @@ export default function BrandsPage() {
               <img alt="ME5 Artistry" className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=1000" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent"></div>
               <div className="absolute bottom-8 left-8">
-                <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-widest border border-white/30">Eye Artistry</span>
+                <span className="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-semibold uppercase tracking-widest border border-white/30">High-Definition Pigments</span>
               </div>
             </ScrollReveal>
           </div>
           <div className="md:col-span-5 md:col-start-8">
             <ScrollReveal delay={200}>
               <span className="font-serif text-3xl md:text-4xl block mb-2">ME5</span>
-              <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">Dedicated to the Art of Eye Makeup</span>
+              <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">Language of Confidence</span>
               <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">Your Eyes,<br />Your Magic,<br />Your ME5.</h2>
               <p className="text-base text-on-surface-variant mb-10 max-w-md">
-                Inspired by the power and mystery of the eyes, we create high-performance products that enhance, define, and transform every gaze. ME5 combines cutting-edge technology with richly pigmented formulas to deliver long-lasting, expressive, and effortless eye artistry.
+                A dedicated eye-beauty brand that treats makeup as a language of confidence. ME5 utilizes advanced textures, vibrant high-definition pigments, and ultra-long-lasting wear to elevate, define, and transform every gaze.
               </p>
               <a href="https://me5.idn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-primary hover:border-muted-gold">
                 Discover ME5 <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -147,14 +135,14 @@ export default function BrandsPage() {
             <ScrollReveal>
               <span className="font-serif text-3xl md:text-4xl block mb-2">AG</span>
               <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold block mb-6">Angela Glamor</span>
-              <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">Flawless Skin.<br />Polished Nails.<br />Professional Glamor.</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-medium leading-tight mb-6">Flawless Skin.<br />Impeccable Gel Nails.<br />Professional Glamor.</h2>
               <p className="text-base text-on-surface-variant mb-8 max-w-md">
-                A professional beauty brand dedicated to flawless base makeup and salon-grade nail artistry. Created for modern beauty lovers and professionals, AG believes glamour starts with a perfected complexion and ends with polished details.
+                A high-performance, professional-grade beauty brand built for enthusiasts and salon experts alike. AG focuses on engineered, seamless base makeup formulas and premium, high-gloss, ultra-durable gel nail polishes that bring professional artistry into daily routines.
               </p>
               <div className="flex flex-wrap gap-3 mb-10">
                 <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Base Makeup</span>
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Nail Artistry</span>
-                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Elegance</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Gel Nails</span>
+                <span className="px-4 py-2 rounded-full bg-surface-container-high text-xs font-semibold uppercase tracking-widest">Salon Grade</span>
               </div>
               <a href="https://ag.idn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest hover:text-muted-gold transition-colors pb-1 border-b border-primary hover:border-muted-gold">
                 Explore AG Collection <span className="material-symbols-outlined text-sm">arrow_forward</span>
