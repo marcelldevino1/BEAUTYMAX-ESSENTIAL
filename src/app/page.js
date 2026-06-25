@@ -40,50 +40,59 @@ export default function Home() {
   };
 
   const getSlideStyle = (index) => {
-    if (index === currentSlide) {
-      // Aktif: Bayangan diperhalus agar lebih premium
-      return "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 opacity-100 z-20 drop-shadow-2xl";
-    } else if (index === (currentSlide - 1 + heroSlides.length) % heroSlides.length) {
-      return "left-[10%] md:left-[15%] top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.80] opacity-30 hover:opacity-60 z-10";
-    } else if (index === (currentSlide + 1) % heroSlides.length) {
-      return "left-[90%] md:left-[85%] top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.80] opacity-30 hover:opacity-60 z-10";
-    } else {
-      return "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-50 opacity-0 z-0 pointer-events-none"; 
-    }
-  };
+  if (index === currentSlide) {
+    return "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-100 opacity-100 z-20 drop-shadow-2xl";
+  } else if (index === (currentSlide - 1 + heroSlides.length) % heroSlides.length) {
+    return "left-[2%] md:left-[15%] top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.72] md:scale-[0.80] opacity-25 z-10";
+  } else if (index === (currentSlide + 1) % heroSlides.length) {
+    return "left-[98%] md:left-[85%] top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.72] md:scale-[0.80] opacity-25 z-10";
+  } else {
+    return "left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-50 opacity-0 z-0 pointer-events-none";
+  }
+};
 
   return (
     <main className="pt-24 pb-16 md:pb-24 flex-grow bg-surface">
       
       {/* HERO SECTION - 3D CAROUSEL */}
-      <section className="w-full relative overflow-hidden h-[calc(100vh-96px)] bg-surface">
-        <div className="relative w-full h-full max-w-[1600px] mx-auto">
-          {heroSlides.map((slide, index) => (
-            <div 
-              key={index} 
-              className={`absolute w-[85vw] md:w-[70vw] max-w-6xl transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer ${getSlideStyle(index)}`}
-              onClick={() => handleSlideClick(index, slide.link)}
-            >
-              <img 
-                alt={slide.alt} 
-                className="w-full h-auto rounded-xl md:rounded-[24px] object-cover" 
-                src={slide.image} 
-              />
-            </div>
-          ))}
-        </div>
+<section className="w-full bg-surface pt-4 md:pt-8 pb-10 md:pb-20">
+  <div className="relative w-full max-w-[1600px] mx-auto">
 
-        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-30">
-          {heroSlides.map((_, index) => (
-            <button 
-              key={index} 
-              onClick={() => setCurrentSlide(index)} 
-              className={`rounded-full transition-all duration-500 ${currentSlide === index ? "w-8 h-2 bg-primary" : "w-2 h-2 bg-primary/20 hover:bg-primary/50"}`} 
-              aria-label={`Go to slide ${index + 1}`} 
-            />
-          ))}
+    <div className="relative h-[220px] sm:h-[300px] md:h-[650px] overflow-hidden">
+
+      {heroSlides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute w-[94vw] sm:w-[90vw] md:w-[70vw] max-w-6xl transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer ${getSlideStyle(index)}`}
+          onClick={() => handleSlideClick(index, slide.link)}
+        >
+          <img
+            alt={slide.alt}
+            src={slide.image}
+            className="w-full h-auto rounded-xl md:rounded-[24px] object-cover shadow-2xl"
+          />
         </div>
-      </section>
+      ))}
+
+    </div>
+
+    <div className="flex justify-center gap-3 mt-5 md:mt-8">
+      {heroSlides.map((_, index) => (
+        <button
+          key={index}
+          onClick={() => setCurrentSlide(index)}
+          className={`rounded-full transition-all duration-500 ${
+            currentSlide === index
+              ? "w-8 h-2 bg-primary"
+              : "w-2 h-2 bg-primary/20 hover:bg-primary/50"
+          }`}
+          aria-label={`Go to slide ${index + 1}`}
+        />
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* VISION & MISSION - EDITORIAL LAYOUT */}
       <ScrollReveal>
