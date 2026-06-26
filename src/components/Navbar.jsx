@@ -52,10 +52,10 @@ export default function Navbar() {
                 BK Cosmetics <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
               </a>
               <a href="https://me5.idn" target="_blank" rel="noopener noreferrer" className="px-5 py-4 text-xs font-semibold uppercase tracking-widest text-primary hover:bg-surface-container-high hover:text-muted-gold transition-colors flex justify-between items-center group border-t border-outline-variant/10">
-                ME5 Skincare <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                ME5 Magic Eyes <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
               </a>
               <a href="https://ag.idn" target="_blank" rel="noopener noreferrer" className="px-5 py-4 text-xs font-semibold uppercase tracking-widest text-primary hover:bg-surface-container-high hover:text-muted-gold transition-colors flex justify-between items-center group border-t border-outline-variant/10">
-                AG Fragrance <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                Angela Glamor (AG) <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -83,8 +83,8 @@ export default function Navbar() {
         <div className="w-full px-12 flex flex-col gap-4 items-center pb-12 shrink-0">
           <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold mb-2 border-b border-muted-gold pb-1">Visit Our Stores</span>
           <a href="https://bkcosmetics.idn" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop BK Cosmetics</a>
-          <a href="https://me5.idn" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop ME5 Skincare</a>
-          <a href="https://ag.idn" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop AG Fragrance</a>
+          <a href="https://me5.idn" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop ME5 Magic Eyes</a>
+          <a href="https://ag.idn" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop Angela Glamor (AG)</a>
         </div>
       </div>
     </>
