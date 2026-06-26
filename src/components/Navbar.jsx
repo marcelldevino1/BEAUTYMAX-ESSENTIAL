@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -8,11 +8,25 @@ export default function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isShopOpen, setIsShopOpen] = useState(false);
   const pathname = usePathname();
+  
+  // Fitur baru untuk menstabilkan dropdown Shop Now
+  const shopDropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Fitur baru: Menutup dropdown HANYA saat user klik di luar kotak menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (shopDropdownRef.current && !shopDropdownRef.current.contains(event.target)) {
+        setIsShopOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
@@ -35,28 +49,30 @@ export default function Navbar() {
             <Link className={`text-xs font-semibold uppercase tracking-widest hover:text-primary transition-all ${isActive('/contact') ? 'text-primary border-b-2 border-primary pb-1' : 'text-on-surface-variant'}`} href="/contact">Contact</Link>
           </nav>
 
-          <div className="hidden md:block relative">
+          {/* Menambahkan ref={shopDropdownRef} di sini */}
+          <div className="hidden md:block relative" ref={shopDropdownRef}>
             <button 
               onClick={() => setIsShopOpen(!isShopOpen)}
-              onBlur={() => setTimeout(() => setIsShopOpen(false), 200)}
+              // onBlur dihapus karena sudah diganti dengan handleClickOutside di atas
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-primary border border-primary px-6 py-2 hover:bg-muted-gold hover:border-muted-gold hover:text-white transition-all duration-300"
             >
               Shop Now
               <span className="material-symbols-outlined text-[16px] transition-transform duration-300" style={{ transform: isShopOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>expand_more</span>
             </button>
+            
             <div className={`absolute top-full right-0 mt-3 w-56 bg-surface border border-outline-variant/30 shadow-lg transform transition-all duration-300 origin-top-right flex flex-col ${isShopOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`}>
               <div className="p-4 border-b border-outline-variant/20 bg-surface-container-low">
                 <span className="text-[10px] text-muted-gold font-semibold uppercase tracking-widest">Select Destination</span>
               </div>
-              <a href="https://bkcosmetics.idn" target="_blank" rel="noopener noreferrer" className="px-5 py-4 text-xs font-semibold uppercase tracking-widest text-primary hover:bg-surface-container-high hover:text-muted-gold transition-colors flex justify-between items-center group">
+              <Link href="/coming-soon" onClick={() => setIsShopOpen(false)} className="px-5 py-4 text-xs font-semibold uppercase tracking-widest text-primary hover:bg-surface-container-high hover:text-muted-gold transition-colors flex justify-between items-center group">
                 BK Cosmetics <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
-              </a>
-              <a href="https://me5.idn" target="_blank" rel="noopener noreferrer" className="px-5 py-4 text-xs font-semibold uppercase tracking-widest text-primary hover:bg-surface-container-high hover:text-muted-gold transition-colors flex justify-between items-center group border-t border-outline-variant/10">
+              </Link>
+              <Link href="/coming-soon" onClick={() => setIsShopOpen(false)} className="px-5 py-4 text-xs font-semibold uppercase tracking-widest text-primary hover:bg-surface-container-high hover:text-muted-gold transition-colors flex justify-between items-center group border-t border-outline-variant/10">
                 ME5 Magic Eyes <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
-              </a>
-              <a href="https://ag.idn" target="_blank" rel="noopener noreferrer" className="px-5 py-4 text-xs font-semibold uppercase tracking-widest text-primary hover:bg-surface-container-high hover:text-muted-gold transition-colors flex justify-between items-center group border-t border-outline-variant/10">
+              </Link>
+              <Link href="/coming-soon" onClick={() => setIsShopOpen(false)} className="px-5 py-4 text-xs font-semibold uppercase tracking-widest text-primary hover:bg-surface-container-high hover:text-muted-gold transition-colors flex justify-between items-center group border-t border-outline-variant/10">
                 Angela Glamor (AG) <span className="material-symbols-outlined text-[14px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -82,9 +98,9 @@ export default function Navbar() {
         </div>
         <div className="w-full px-12 flex flex-col gap-4 items-center pb-12 shrink-0">
           <span className="text-xs font-semibold uppercase tracking-widest text-muted-gold mb-2 border-b border-muted-gold pb-1">Visit Our Stores</span>
-          <a href="https://bkcosmetics.idn" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop BK Cosmetics</a>
-          <a href="https://me5.idn" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop ME5 Magic Eyes</a>
-          <a href="https://ag.idn" target="_blank" rel="noopener noreferrer" className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop Angela Glamor (AG)</a>
+          <Link href="/coming-soon" onClick={() => setIsMobileOpen(false)} className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop BK Cosmetics</Link>
+          <Link href="/coming-soon" onClick={() => setIsMobileOpen(false)} className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop ME5 Magic Eyes</Link>
+          <Link href="/coming-soon" onClick={() => setIsMobileOpen(false)} className="w-full max-w-xs text-center text-xs font-semibold uppercase tracking-widest text-on-primary bg-primary px-8 py-4 hover:bg-muted-gold transition-colors">Shop Angela Glamor (AG)</Link>
         </div>
       </div>
     </>
