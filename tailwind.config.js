@@ -33,7 +33,15 @@ module.exports = {
         "brand-ag": "#F4F5F7",              // Cool Slate: Abu-abu kebiruan terang untuk background section AG
 
         // ==========================================
-        // 3. LEGACY COLORS (Agar kode lamamu tidak error)
+        // 3. NEW DESIGN BACKGROUNDS (Gradient & Pills)
+        // ==========================================
+        "design-bg-top": "#EAD5E6",         // Warna lilac pastel atas
+        "design-bg-mid": "#F3E3ED",         // Warna pink pastel tengah
+        "design-bg-bottom": "#D2B8C9",      // Warna mauve bawah
+        "design-pill": "#A58C99",           // Warna abu kecoklatan untuk tombol
+
+        // ==========================================
+        // 4. LEGACY COLORS (Agar kode lamamu tidak error)
         // ==========================================
         "error-container": "#ffdad6",
         "on-tertiary": "#ffffff",
@@ -89,13 +97,15 @@ module.exports = {
         "margin-mobile": "24px"
       },
       fontFamily: {
-        "body-md": ["var(--font-inter)", "sans-serif"],
-        "headline-md": ["var(--font-playfair)", "serif"],
-        "display-lg": ["var(--font-playfair)", "serif"],
-        "body-lg": ["var(--font-inter)", "sans-serif"],
-        "label-sm": ["var(--font-inter)", "sans-serif"],
-        "headline-lg": ["var(--font-playfair)", "serif"],
-        "headline-lg-mobile": ["var(--font-playfair)", "serif"]
+        "sans": ["var(--font-poppins)", "sans-serif"],
+        "serif": ["var(--font-poppins)", "sans-serif"],
+        "body-md": ["var(--font-poppins)", "sans-serif"],
+        "headline-md": ["var(--font-poppins)", "sans-serif"],
+        "display-lg": ["var(--font-poppins)", "sans-serif"],
+        "body-lg": ["var(--font-poppins)", "sans-serif"],
+        "label-sm": ["var(--font-poppins)", "sans-serif"],
+        "headline-lg": ["var(--font-poppins)", "sans-serif"],
+        "headline-lg-mobile": ["var(--font-poppins)", "sans-serif"]
       },
       fontSize: {
         "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
