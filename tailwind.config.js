@@ -12,33 +12,34 @@ module.exports = {
         // ==========================================
         // 1. QUIET LUXURY CORE PALETTE (Art Gallery)
         // ==========================================
-        "surface": "#FCFCFA",               // Pearl White: Background utama yang lebih bersih dan mahal
-        "primary": "#1A1A1A",               // Deep Charcoal: Hitam tinta untuk judul, lebih mewah dari #000000
-        "on-surface-variant": "#5C5C5C",    // Abu-abu elegan untuk teks paragraf agar mata tidak lelah
-        "muted-gold": "#C5A880",            // Champagne Gold: Aksen mewah untuk tombol/hover
+        "surface": "#FCFCFA",
+        "primary": "#1A1A1A",
+        "on-surface-variant": "#5C5C5C",
+        "muted-gold": "#C5A880",
         "surface-container-lowest": "#FFFFFF", 
-        "surface-container-low": "#F9F9F7", // Cashmere Grey: Background sekunder tipis
-        "surface-container": "#F5F5F2",     // Sedikit lebih gelap dari Cashmere untuk pemisah
+        "surface-container-low": "#F9F9F7",
+        "surface-container": "#F5F5F2",
         "surface-container-high": "#EFEFEA",
-        "outline-variant": "#E5E5E5",       // Garis border tipis
-        "primary-container": "#111111",     // Deep Onyx: Sangat gelap untuk Footer
-        "soft-beige": "#E8E2DA",            // Beige premium untuk aksen kotak
-        "charcoal-text": "#333333",         // Variasi gelap untuk teks alternatif
+        "outline-variant": "#E5E5E5",
+        "primary-container": "#111111",
+        "soft-beige": "#E8E2DA",
+        "charcoal-text": "#333333",
         
         // ==========================================
         // 2. BRAND SPECIFIC BACKGROUNDS (Soft & Luxury)
         // ==========================================
-        "brand-bk": "#FFF5F7",              // Soft Blush: Pink super tipis untuk background section BK
-        "brand-me5": "#FDFBF7",             // Champagne Sand: Krem super tipis untuk background section ME5
-        "brand-ag": "#F4F5F7",              // Cool Slate: Abu-abu kebiruan terang untuk background section AG
+        "brand-bk": "#FFF5F7",
+        "brand-me5": "#FDFBF7",
+        "brand-ag": "#F4F5F7",
 
         // ==========================================
         // 3. NEW DESIGN BACKGROUNDS (Gradient & Pills)
         // ==========================================
-        "design-bg-top": "#EAD5E6",         // Warna lilac pastel atas
-        "design-bg-mid": "#F3E3ED",         // Warna pink pastel tengah
-        "design-bg-bottom": "#D2B8C9",      // Warna mauve bawah
-        "design-pill": "#A58C99",           // Warna abu kecoklatan untuk tombol
+        "design-bg-1": "#C3AEC1",           // Lilac pucat (atas)
+        "design-bg-2": "#EDD4CF",           // Peach/Pink (tengah)
+        "design-bg-3": "#E2B5B6",           // Pink redup (bawah)
+        "design-bg-4": "#796781",           // Pink redup (paling bawah)
+        "design-pill": "#9A8194",           // Warna tombol
 
         // ==========================================
         // 4. LEGACY COLORS (Agar kode lamamu tidak error)
@@ -116,9 +117,6 @@ module.exports = {
         "headline-lg": ["48px", { lineHeight: "56px", fontWeight: "500" }],
         "headline-lg-mobile": ["32px", { lineHeight: "40px", fontWeight: "500" }]
       },
-      // ==========================================
-      // ANIMASI UNTUK CUSTOM LOADING SCREEN (SPLASH)
-      // ==========================================
       keyframes: {
         'loading-bar': {
           '0%': { transform: 'translateX(-100%)' },
