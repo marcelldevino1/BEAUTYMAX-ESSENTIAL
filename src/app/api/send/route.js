@@ -11,7 +11,7 @@ export async function POST(request) {
     const data = await resend.emails.send({
       from: 'Beautymax Contact <onboarding@resend.dev>', 
       
-      to: ['marcelldevino7@gmail.com'], 
+      to: ['help@jk.beautymaxid.com'], 
       
       subject: `New Inquiry: ${subject}`,
       html: `
