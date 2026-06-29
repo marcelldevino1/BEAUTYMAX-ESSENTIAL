@@ -63,22 +63,27 @@ export default function AboutPage() {
       {/* ========================================== */}
       {/* VISION & MISSION */}
       {/* ========================================== */}
-      <section className="w-full px-4 md:px-8 lg:px-12 mx-auto py-16 md:py-24 relative z-10">
-        <div className="w-full max-w-[1500px] mx-auto bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-10 md:p-16 lg:p-20 shadow-2xl border border-white/60 flex flex-col md:flex-row gap-16 md:gap-24">
+      <section className="w-full px-3 md:px-6 lg:px-8 py-16 md:py-24 relative z-10 flex justify-center">
+        {/* REVISI: Mengubah p-20 menjadi px-20 lg:py-32 agar atas-bawahnya jauh lebih lega. 
+            Ditambah items-center agar teks berada persis di tengah-tengah kotak. */}
+        <div className="w-full max-w-[1800px] bg-white/80 backdrop-blur-xl rounded-[2rem] lg:rounded-[2.5rem] px-10 py-16 md:px-16 md:py-24 lg:px-20 lg:py-32 shadow-2xl border border-white/60 flex flex-col md:flex-row gap-12 md:gap-20 lg:gap-24 items-center">
           
-          <ScrollReveal className="md:w-[55%]">
-            <div className="border-t-2 border-[#766350]/30 pt-8">
-              <span className="inline-block text-sm font-bold uppercase tracking-widest text-[#766350]/80 mb-6">Our Vision</span>
-              <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-[#766350] leading-tight">
+          <ScrollReveal className="md:w-[55%] w-full">
+            {/* Jarak dari garis ke tulisan 'Our Vision' diperlebar sedikit (pt-12) */}
+            <div className="border-t-[1.5px] border-[#766350]/30 pt-10 md:pt-12">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#766350]/80 mb-6 md:mb-8">Our Vision</span>
+              
+              <h3 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#766350] leading-tight">
                 "Shaping a world where diverse, trend-forward beauty experiences empower everyone to express their authentic selves."
               </h3>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={150} className="md:w-[45%]">
-            <div className="border-t-2 border-[#766350]/30 pt-8 flex flex-col h-full">
-              <span className="inline-block text-sm font-bold uppercase tracking-widest text-[#766350]/80 mb-6">Our Mission</span>
-              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-[#766350] font-medium">
+          <ScrollReveal delay={150} className="md:w-[45%] w-full">
+            <div className="border-t-[1.5px] border-[#766350]/30 pt-10 md:pt-12 flex flex-col h-full">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#766350]/80 mb-6 md:mb-8">Our Mission</span>
+              
+              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-[#766350] font-medium">
                 To create accessible, insight-driven beauty products, foster purposeful partnerships, champion responsible brand development, and deliver sustainable value for our global communities.
               </p>
             </div>

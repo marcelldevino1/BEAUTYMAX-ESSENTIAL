@@ -284,9 +284,9 @@ export default function Home() {
       </section>
 
       {/* ======================================= */}
-      {/* OUR FACTORY */}
+      {/* OUR FACTORY (INFINITE MARQUEE SCROLL) */}
       {/* ======================================= */}
-      <section className="relative w-full py-10 md:py-16 mb-20 md:mb-32 mt-10 md:mt-24">
+      <section className="relative w-full py-10 md:py-16 mb-20 md:mb-32 mt-10 md:mt-24 overflow-hidden">
         
         {/* FLORAL 3: Our Factory - Kiri Atas */}
         <img 
@@ -296,52 +296,60 @@ export default function Home() {
           className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-32 md:w-60 z-0 pointer-events-none opacity-90 drop-shadow-lg"
         />
 
-        <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10 mb-10 md:mb-16">
           <ScrollReveal>
-            <div className="flex flex-col items-center mb-16">
+            <div className="flex flex-col items-center">
               <h2 className={`${glassHeaderStyle} px-10 py-3 text-2xl md:text-3xl font-bold tracking-wide`}>
                 Our Factory
               </h2>
             </div>
-            
-            <div className="relative group">
-              <div className="relative w-full h-[400px] sm:h-[500px] md:h-[650px] lg:h-[750px] overflow-hidden rounded-[2.5rem] border-[8px] border-white/50 shadow-2xl bg-surface-container">
-                {["/images/factory-1.webp", "/images/factory-2.webp", "/images/factory-3.webp"].map((img, index) => (
-                  <img 
-                    key={index}
-                    src={img}
-                    alt={`Factory ${index + 1}`}
-                    loading={index === 0 ? "eager" : "lazy"}
-                    className={`absolute w-full h-full object-cover transition-opacity duration-700 ease-in-out ${facilitySlide === index ? 'opacity-100' : 'opacity-0'}`}
-                  />
-                ))}
-              </div>
-
-              <button 
-                onClick={() => setFacilitySlide((prev) => (prev === 0 ? 2 : prev - 1))}
-                className={`${glassButtonStyle} absolute left-4 md:left-6 top-1/2 -translate-y-1/2 p-3 md:p-4 z-10`}
-              >
-                <span className="material-symbols-outlined text-xl md:text-2xl">chevron_left</span>
-              </button>
-
-              <button 
-                onClick={() => setFacilitySlide((prev) => (prev === 2 ? 0 : prev + 1))}
-                className={`${glassButtonStyle} absolute right-4 md:right-6 top-1/2 -translate-y-1/2 p-3 md:p-4 z-10`}
-              >
-                <span className="material-symbols-outlined text-xl md:text-2xl">chevron_right</span>
-              </button>
-
-              <div className="flex justify-center gap-3 mt-8">
-                {[0, 1, 2].map((i) => (
-                  <button
-                    key={i}
-                    onClick={() => setFacilitySlide(i)}
-                    className={`h-2.5 rounded-full transition-all ${facilitySlide === i ? 'w-10 bg-[#766350]' : 'w-2.5 bg-[#766350]/30'}`}
-                  />
-                ))}
-              </div>
-            </div>
           </ScrollReveal>
+        </div>
+        
+        {/* ==============================================
+            CSS ANIMASI KHUSUS (Ditaruh di sini agar rapi) 
+            translateX(-50%) akan menggeser tepat setengah lebar kontainer.
+        ================================================== */}
+        <style jsx>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee {
+            /* 35s = kecepatan scroll (makin besar angkanya makin lambat/santai) */
+            animation: marquee 35s linear infinite;
+          }
+          /* Efek premium: Berhenti geser kalau cursor di-hover (dipegang) */
+          .animate-marquee:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+
+        {/* Kontainer Slider - Dibuat w-full biar mentok ujung kiri-kanan layar */}
+        <div className="relative w-full flex overflow-hidden group">
+          
+          {/* Track Animasi: Berisi 2 blok set gambar yang berdampingan */}
+          <div className="flex w-max animate-marquee">
+            
+            {/* BLOK 1: Set 5 Gambar Asli */}
+            <div className="flex gap-6 md:gap-10 px-3 md:px-5">
+              {["/images/factory-1.webp", "/images/factory-2.webp", "/images/factory-3.webp", "/images/factory-4.webp", "/images/factory-5.webp"].map((img, index) => (
+                <div key={`set1-${index}`} className="w-[280px] sm:w-[400px] md:w-[600px] aspect-[4/3] flex-shrink-0 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border-[6px] border-white/50 shadow-2xl bg-white/20">
+                  <img src={img} alt={`Factory Facility ${index + 1}`} loading="lazy" className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+
+            {/* BLOK 2: Duplikat Persis dari Blok 1 (Agar ilusi loop tidak pernah terputus) */}
+            <div className="flex gap-6 md:gap-10 px-3 md:px-5">
+              {["/images/1.webp", "/images/2.webp", "/images/3.webp", "/images/4.webp", "/images/5.webp"].map((img, index) => (
+                <div key={`set2-${index}`} className="w-[280px] sm:w-[400px] md:w-[600px] aspect-[4/3] flex-shrink-0 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border-[6px] border-white/50 shadow-2xl bg-white/20">
+                  <img src={img} alt={`Factory Facility Duplicate ${index + 1}`} loading="lazy" className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+
+          </div>
         </div>
       </section>
 
