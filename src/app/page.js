@@ -334,7 +334,7 @@ export default function Home() {
             
             {/* BLOK 1: Set 5 Gambar Asli */}
             <div className="flex gap-6 md:gap-10 px-3 md:px-5">
-              {["/images/factory-1.webp", "/images/factory-2.webp", "/images/factory-3.webp", "/images/4.webp", "/5.webp"].map((img, index) => (
+              {["/images/factory-1.webp", "/images/factory-2.webp", "/images/factory-3.webp", "/images/4.webp", "images/5.webp"].map((img, index) => (
                 <div key={`set1-${index}`} className="w-[280px] sm:w-[400px] md:w-[600px] aspect-[4/3] flex-shrink-0 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border-[6px] border-white/50 shadow-2xl bg-white/20">
                   <img src={img} alt={`Factory Facility ${index + 1}`} loading="lazy" className="w-full h-full object-cover" />
                 </div>
