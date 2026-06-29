@@ -53,13 +53,15 @@ export default function Home() {
   };
 
   // ==========================================
-  // GLASSMORPHISM STYLES (Sama persis dengan Navbar)
+  // FIX: GLASSMORPHISM PEKAT (Sesuai gambar Preview klien)
+  // bg-black/35  : Memberikan warna dasar gelap transparan (pekat)
+  // border-[3px] : Border putih tebal
+  // text-white   : Teks putih tegas
   // ==========================================
-  const glassHeaderStyle = "bg-design-pill/60 backdrop-blur-md border-[1.5px] border-white/60 text-white rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.15)]";
-  const glassButtonStyle = "bg-design-pill/60 backdrop-blur-md border-[1.5px] border-white/60 text-white rounded-full shadow-[0_8px_16px_rgba(0,0,0,0.15)] hover:bg-design-pill/80 hover:scale-105 transition-all duration-300";
+  const glassHeaderStyle = "bg-black/45 backdrop-blur-md border-[3px] border-white text-white rounded-full shadow-lg";
+  const glassButtonStyle = "bg-black/45 backdrop-blur-md border-[3px] border-white text-white rounded-full shadow-lg hover:bg-black/50 hover:scale-105 transition-all duration-300";
 
   return (
-    // DITAMBAHKAN relative dan overflow-hidden agar ornamen tidak membuat layar geser ke samping
     <main className="flex-grow bg-[linear-gradient(to_bottom,#C1AEC1_30%,#EED5D0_35%,#E2B6B7_70%,#786680_100%)] min-h-screen relative overflow-hidden">
       
       {/* HERO SECTION */}
@@ -76,6 +78,8 @@ export default function Home() {
                 <img
                   alt={slide.alt}
                   src={slide.image}
+                  fetchPriority={index === 0 ? "high" : "auto"}
+                  decoding="async"
                   className="w-full h-auto rounded-xl md:rounded-[24px] object-cover border-4 md:border-[8px] border-white/50 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
                 />
               </div>
@@ -102,25 +106,25 @@ export default function Home() {
       {/* VISION & MISSION */}
       <ScrollReveal>
         <section className="px-6 md:px-16 relative z-30 -mt-16 md:-mt-24 mb-20 md:mb-32">
-          <div className="max-w-6xl mx-auto bg-surface-container-lowest p-10 md:p-16 shadow-2xl flex flex-col md:flex-row gap-12 md:gap-24 border border-outline-variant/30 rounded-2xl">
+          <div className="max-w-6xl mx-auto bg-white/40 backdrop-blur-xl p-10 md:p-16 shadow-2xl flex flex-col md:flex-row gap-12 md:gap-24 border border-white/50 rounded-2xl">
             
             <div className="md:w-1/3">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-muted-gold mb-4">Our Purpose</span>
-              <h2 className="text-4xl md:text-5xl font-semibold text-primary leading-tight">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#766350]/80 mb-4">Our Purpose</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#766350] leading-tight drop-shadow-sm">
                 Beauty for<br/>Every Expression.
               </h2>
             </div>
 
-            <div className="md:w-2/3 flex flex-col gap-10 md:border-l border-outline-variant md:pl-16">
+            <div className="md:w-2/3 flex flex-col gap-10 md:border-l border-[#766350]/20 md:pl-16">
               <div>
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-4">Vision</h3>
-                <p className="text-xl md:text-2xl text-primary leading-snug font-medium italic">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-[#766350]/80 mb-4">Vision</h3>
+                <p className="text-xl md:text-2xl text-[#766350] leading-snug font-medium italic">
                   &quot;Shaping a world where diverse, trend-forward beauty experiences empower everyone to express their authentic selves.&quot;
                 </p>
               </div>
-              <div className="pt-8 border-t border-outline-variant/50">
-                <h3 className="text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-4">Mission</h3>
-                <p className="text-base text-on-surface-variant leading-relaxed max-w-2xl">
+              <div className="pt-8 border-t border-[#766350]/20">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-[#766350]/80 mb-4">Mission</h3>
+                <p className="text-base text-[#766350] leading-relaxed max-w-2xl font-medium">
                   To create accessible, insight-driven beauty products, foster purposeful partnerships, champion responsible brand development, and deliver sustainable value for our global communities.
                 </p>
               </div>
@@ -139,16 +143,16 @@ export default function Home() {
         <img 
           src="/images/blur-floral-left.webp" 
           alt="floral" 
+          loading="lazy"
           className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-28 md:w-56 z-0 pointer-events-none opacity-90 drop-shadow-lg"
         />
 
-        {/* CONTAINER PENGUNCI KONTEN (Agar tidak raksasa) */}
         <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
           <ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 items-center mb-16 gap-6">
               
               <div className="flex justify-center md:justify-start">
-                <h2 className={`${glassHeaderStyle} px-8 py-3 text-2xl md:text-3xl font-bold`}>
+                <h2 className={`${glassHeaderStyle} px-8 py-3 text-2xl md:text-3xl font-bold tracking-wide`}>
                   Proprietary Brands
                 </h2>
               </div>
@@ -157,12 +161,12 @@ export default function Home() {
                  <img 
                    src="/images/love-ornament.webp" 
                    alt="Love Accent" 
-                   className="h-10 md:h-14 w-auto object-contain" 
+                   className="h-10 md:h-14 w-auto object-contain drop-shadow-md" 
                  />
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <Link className={`${glassButtonStyle} px-8 py-3 text-sm md:text-base font-semibold flex items-center gap-2`} href="/brands">
+                <Link className={`${glassButtonStyle} px-8 py-3 text-sm md:text-base font-bold flex items-center gap-3`} href="/brands">
                   View Directory <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
                 </Link>
               </div>
@@ -175,9 +179,9 @@ export default function Home() {
               
               {/* Brand 1: BK */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wide z-10`}>BK Cosmetics</h3>
-                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white shadow-xl bg-surface-container">
-                  <img alt="BK Cosmetics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/bk-discover.webp" />
+                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wider z-10`}>BK Cosmetics</h3>
+                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white/50 shadow-xl bg-white/20 backdrop-blur-sm">
+                  <img alt="BK Cosmetics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/bk-discover.webp" loading="lazy" />
                 </div>
                 <Link href="/brands#bk" className={`${glassButtonStyle} px-10 py-2 text-sm font-bold uppercase tracking-wider`}>
                   Discover
@@ -186,9 +190,9 @@ export default function Home() {
               
               {/* Brand 2: ME5 */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wide z-10`}>ME5</h3>
-                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white shadow-xl bg-surface-container">
-                  <img alt="ME5 Skincare" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/me5-discover.webp" />
+                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wider z-10`}>ME5</h3>
+                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white/50 shadow-xl bg-white/20 backdrop-blur-sm">
+                  <img alt="ME5 Skincare" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/me5-discover.webp" loading="lazy" />
                 </div>
                 <Link href="/brands#me5" className={`${glassButtonStyle} px-10 py-2 text-sm font-bold uppercase tracking-wider`}>
                   Discover
@@ -197,9 +201,9 @@ export default function Home() {
               
               {/* Brand 3: AG */}
               <div className="flex flex-col items-center group cursor-pointer">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wide z-10`}>Angela Glamour</h3>
-                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white shadow-xl bg-surface-container">
-                  <img alt="AG Fragrance" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/ag-discover.webp" />
+                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wider z-10`}>Angela Glamour</h3>
+                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white/50 shadow-xl bg-white/20 backdrop-blur-sm">
+                  <img alt="AG Fragrance" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/ag-discover.webp" loading="lazy" />
                 </div>
                 <Link href="/brands#ag" className={`${glassButtonStyle} px-10 py-2 text-sm font-bold uppercase tracking-wider`}>
                   Discover
@@ -212,110 +216,132 @@ export default function Home() {
       </section>
 
       {/* ======================================= */}
-      {/* ABOUT THE COMPANY */}
+      {/* ABOUT THE COMPANY & BUILDING (NEW LAYOUT) */}
       {/* ======================================= */}
-      <section className="relative w-full pt-10 md:pt-16">
+      <section className="relative w-full py-16 md:py-24">
 
         {/* FLORAL 2: About The Company - Kanan Atas */}
         <img 
           src="/images/floral-right.webp" 
           alt="floral" 
+          loading="lazy"
           className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 w-32 md:w-60 z-0 pointer-events-none opacity-90 drop-shadow-lg"
         />
 
-        {/* CONTAINER PENGUNCI KONTEN */}
-        <div className="max-w-6xl mx-auto px-6 md:px-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
           
-          {/* Title Pill */}
-          <div className="flex flex-col items-center relative z-30 -mb-6 md:-mb-8">
-            <h2 className={`${glassHeaderStyle} px-10 py-3 text-xl md:text-3xl font-bold`}>
+          {/* Title Pill (Di atas kotak putih) */}
+          <div className="flex justify-start mb-6">
+            <h2 className={`${glassHeaderStyle} px-8 py-2 md:py-3 text-lg md:text-xl font-bold tracking-wide`}>
               About The Company
             </h2>
           </div>
 
-          {/* Text Box */}
-          <ScrollReveal className="relative z-10 w-full bg-white p-8 md:p-12 lg:p-16 pt-16 md:pt-20 shadow-2xl rounded-[2rem]">
-            <div className="text-base md:text-lg leading-relaxed text-charcoal-text space-y-6 md:w-[90%] lg:w-[80%]">
-              <p>
-                Pioneering the color cosmetics industry Since 2002, PT Beautymax Essential Indonesia is a dynamic beauty pioneer that seamlessly bridges high-caliber, global-standard manufacturing with strategic brand management.
-              </p>
-              <p>
-                Operating from state-of-the-art facilities, the company delivers premium OEM/ODM services to international leaders while nurturing a diverse portfolio of proprietary, trend-driven beauty brands. Driven by deep consumer insight and market agility, Beautymax empowers individuality across all generations and lifestyles.
-              </p>
+          <ScrollReveal>
+            {/* Box Utama: Split Layout Kiri (Teks) & Kanan (Gambar Gedung) */}
+            <div className="flex flex-col lg:flex-row bg-white shadow-2xl overflow-hidden rounded-sm border border-white/50">
+              
+              {/* Kolom Kiri: Konten Teks */}
+              <div className="w-full lg:w-1/2 p-10 md:p-14 lg:p-16 flex flex-col justify-center">
+                <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#766350]/60 mb-6 block">
+                  About The Company
+                </span>
+                
+                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#766350] leading-tight mb-8">
+                  Pioneering the color cosmetics industry Since 2002.
+                </h3>
+                
+                <div className="space-y-6 text-sm md:text-base text-[#766350] leading-relaxed font-medium">
+                  <p>
+                    PT Beautymax Essential Indonesia is a dynamic beauty pioneer that seamlessly bridges high-caliber, global-standard manufacturing with strategic brand management.
+                  </p>
+                  <p>
+                    Operating from state-of-the-art facilities, the company delivers premium OEM/ODM services to international leaders while nurturing a diverse portfolio of proprietary, trend-driven beauty brands.
+                  </p>
+                  <p>
+                    Driven by deep consumer insight and market agility, Beautymax empowers individuality across all generations and lifestyles.
+                  </p>
+                </div>
+                
+                <Link href="/about" className="mt-10 text-xs font-bold uppercase tracking-widest text-[#766350] hover:text-[#766350]/70 flex items-center gap-2 transition-colors w-max">
+                  DISCOVER OUR PROFILE <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </Link>
+              </div>
+
+              {/* Kolom Kanan: Gambar Gedung */}
+              <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto relative">
+                <img
+                  alt="Beautymax Essential HQ"
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  src="/images/office-building.webp"
+                />
+              </div>
+              
             </div>
-            <Link className={`${glassButtonStyle} mt-8 px-6 py-2.5 text-xs font-bold uppercase tracking-widest flex items-center gap-2 w-max`} href="/about">
-              Discover Our Profile <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-            </Link>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* BUILDING IMAGE - RESPONSIVE */}
-      <ScrollReveal delay={200} className="relative w-full z-20 pointer-events-none -mt-12 sm:-mt-20 md:-mt-48 lg:-mt-[280px] overflow-hidden flex justify-center">
-        <img
-          alt="Beautymax Essential HQ"
-          className="w-full px-6 md:px-0 md:w-[100vw] md:min-w-[1000px] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.15)]"
-          src="/images/office-building.webp"
-        />
-      </ScrollReveal>
-
+      {/* ======================================= */}
       {/* OUR FACTORY */}
-      {/* 1. Section dibuat w-full agar mentok layar */}
+      {/* ======================================= */}
       <section className="relative w-full py-10 md:py-16 mb-20 md:mb-32 mt-10 md:mt-24">
         
-        {/* FLORAL 3: Factory - Pasti mentok kiri layar */}
+        {/* FLORAL 3: Our Factory - Kiri Atas */}
         <img 
           src="/images/blur-floral-left.webp" 
           alt="floral" 
+          loading="lazy"
           className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-32 md:w-60 z-0 pointer-events-none opacity-90 drop-shadow-lg"
         />
 
-        {/* 2. max-w dipindah ke div pembungkus konten ini */}
         <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
           <ScrollReveal>
             <div className="flex flex-col items-center mb-16">
-              <h2 className={`${glassHeaderStyle} px-10 py-3 text-2xl md:text-3xl font-bold`}>
+              <h2 className={`${glassHeaderStyle} px-10 py-3 text-2xl md:text-3xl font-bold tracking-wide`}>
                 Our Factory
               </h2>
             </div>
-          
-          <div className="relative group">
-            <div className="relative w-full h-[400px] sm:h-[500px] md:h-[650px] lg:h-[750px] overflow-hidden rounded-[2.5rem] border-[8px] border-white shadow-2xl bg-surface-container">
-              {["/images/factory-1.webp", "/images/factory-2.webp", "/images/factory-3.webp"].map((img, index) => (
-                <img 
-                  key={index}
-                  src={img}
-                  alt={`Factory ${index + 1}`}
-                  className={`absolute w-full h-full object-cover transition-opacity duration-700 ease-in-out ${facilitySlide === index ? 'opacity-100' : 'opacity-0'}`}
-                />
-              ))}
+            
+            <div className="relative group">
+              <div className="relative w-full h-[400px] sm:h-[500px] md:h-[650px] lg:h-[750px] overflow-hidden rounded-[2.5rem] border-[8px] border-white/50 shadow-2xl bg-surface-container">
+                {["/images/factory-1.webp", "/images/factory-2.webp", "/images/factory-3.webp"].map((img, index) => (
+                  <img 
+                    key={index}
+                    src={img}
+                    alt={`Factory ${index + 1}`}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className={`absolute w-full h-full object-cover transition-opacity duration-700 ease-in-out ${facilitySlide === index ? 'opacity-100' : 'opacity-0'}`}
+                  />
+                ))}
+              </div>
+
+              <button 
+                onClick={() => setFacilitySlide((prev) => (prev === 0 ? 2 : prev - 1))}
+                className={`${glassButtonStyle} absolute left-4 md:left-6 top-1/2 -translate-y-1/2 p-3 md:p-4 z-10`}
+              >
+                <span className="material-symbols-outlined text-xl md:text-2xl">chevron_left</span>
+              </button>
+
+              <button 
+                onClick={() => setFacilitySlide((prev) => (prev === 2 ? 0 : prev + 1))}
+                className={`${glassButtonStyle} absolute right-4 md:right-6 top-1/2 -translate-y-1/2 p-3 md:p-4 z-10`}
+              >
+                <span className="material-symbols-outlined text-xl md:text-2xl">chevron_right</span>
+              </button>
+
+              <div className="flex justify-center gap-3 mt-8">
+                {[0, 1, 2].map((i) => (
+                  <button
+                    key={i}
+                    onClick={() => setFacilitySlide(i)}
+                    className={`h-2.5 rounded-full transition-all ${facilitySlide === i ? 'w-10 bg-[#766350]' : 'w-2.5 bg-[#766350]/30'}`}
+                  />
+                ))}
+              </div>
             </div>
-
-            <button 
-              onClick={() => setFacilitySlide((prev) => (prev === 0 ? 2 : prev - 1))}
-              className={`${glassButtonStyle} absolute left-4 md:left-6 top-1/2 -translate-y-1/2 p-3 md:p-4 z-10`}
-            >
-              <span className="material-symbols-outlined text-xl md:text-2xl">chevron_left</span>
-            </button>
-
-            <button 
-              onClick={() => setFacilitySlide((prev) => (prev === 2 ? 0 : prev + 1))}
-              className={`${glassButtonStyle} absolute right-4 md:right-6 top-1/2 -translate-y-1/2 p-3 md:p-4 z-10`}
-            >
-              <span className="material-symbols-outlined text-xl md:text-2xl">chevron_right</span>
-            </button>
-
-            <div className="flex justify-center gap-3 mt-8">
-              {[0, 1, 2].map((i) => (
-                <button
-                  key={i}
-                  onClick={() => setFacilitySlide(i)}
-                  className={`h-2.5 rounded-full transition-all ${facilitySlide === i ? 'w-10 bg-design-pill' : 'w-2.5 bg-gray-300'}`}
-                />
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
         </div>
       </section>
 
