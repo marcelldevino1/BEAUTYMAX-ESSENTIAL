@@ -239,11 +239,11 @@ export default function Home() {
           </div>
 
           <ScrollReveal>
-            {/* Box Utama: Split Layout Kiri (Teks) & Kanan (Gambar Gedung) */}
-            <div className="flex flex-col lg:flex-row bg-white shadow-2xl overflow-hidden rounded-sm border border-white/50">
+            {/* Box Utama: SEKARANG DIPISAH (Menggunakan gap-6 untuk jarak antar card) */}
+            <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-stretch">
               
-              {/* Kolom Kiri: Konten Teks */}
-              <div className="w-full lg:w-1/2 p-10 md:p-14 lg:p-16 flex flex-col justify-center">
+              {/* Kolom Kiri: Konten Teks (Memiliki background putih sendiri) */}
+              <div className="w-full lg:w-1/2 bg-white shadow-2xl rounded-[2rem] border border-white/50 p-10 md:p-14 lg:p-16 flex flex-col justify-center">
                 <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#766350]/60 mb-6 block">
                   About The Company
                 </span>
@@ -269,8 +269,8 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* Kolom Kanan: Gambar Gedung */}
-              <div className="w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-auto relative">
+              {/* Kolom Kanan: Gambar Gedung (Berdiri sendiri menjadi card terpisah) */}
+              <div className="w-full lg:w-1/2 min-h-[350px] sm:min-h-[450px] lg:min-h-auto relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50">
                 <img
                   alt="Beautymax Essential HQ"
                   loading="lazy"
