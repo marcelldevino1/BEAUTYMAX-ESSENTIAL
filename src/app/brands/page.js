@@ -65,8 +65,8 @@ export default function BrandsPage() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#766350]">BK Cosmetics</h2>
         </div>
         
-        {/* REVISI FONT: Responsive sizes untuk mobile */}
-        <h3 className="text-[#766350] mb-6 font-normal tracking-wide" style={{ fontFamily: '"Palace Script MT", cursive' }}>
+        {/* FONT BARU: Dancing Script - lebih readable */}
+        <h3 className="text-[#766350] mb-6 font-normal tracking-wide" style={{ fontFamily: '"Dancing Script", cursive' }}>
           <span className="text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] leading-tight block">
             Beauty is never limited.
           </span>
@@ -119,8 +119,8 @@ export default function BrandsPage() {
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#766350] mb-6 md:mb-8">ME5</h2>
         </div>
         
-        {/* REVISI FONT: Responsive sizes untuk mobile - lebih kecil */}
-        <h3 className="text-[#766350] mb-6 md:mb-8 leading-tight tracking-wide drop-shadow-sm font-normal" style={{ fontFamily: '"Bauhaus 93", sans-serif' }}>
+        {/* FONT BARU: Playfair Display Italic - elegant & readable */}
+        <h3 className="text-[#766350] mb-6 md:mb-8 leading-tight tracking-wide drop-shadow-sm font-normal italic" style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic' }}>
           <span className="text-2xl md:text-3xl lg:text-4xl xl:text-[2.5rem] block">
             Your Eyes. Your Magic. Your ME5.
           </span>
@@ -151,8 +151,8 @@ export default function BrandsPage() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#766350] mb-6 md:mb-8">ANGELA GLAMOR</h2>
         </div>
         
-        {/* REVISI FONT: Responsive sizes untuk mobile - lebih kecil */}
-        <h3 className="text-[#766350] mb-6 md:mb-8 font-normal leading-snug tracking-wide" style={{ fontFamily: '"Freestyle Script", cursive' }}>
+        {/* FONT BARU: Great Vibes - flowing tapi tetap readable */}
+        <h3 className="text-[#766350] mb-6 md:mb-8 font-normal leading-snug tracking-wide" style={{ fontFamily: '"Great Vibes", cursive' }}>
           <span className="text-2xl md:text-3xl lg:text-4xl xl:text-[3.5rem] block">
             Flawless Skin. Impeccable Gel Nails. Professional Glamor.
           </span>
