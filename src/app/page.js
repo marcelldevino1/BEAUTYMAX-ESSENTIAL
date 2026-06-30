@@ -62,7 +62,7 @@ export default function Home() {
   const glassButtonStyle = "bg-black/45 backdrop-blur-md border-[3px] border-white text-white rounded-full shadow-lg hover:bg-black/50 hover:scale-105 transition-all duration-300";
 
   return (
-    <main className="flex-grow bg-[linear-gradient(to_bottom,#C1AEC1_30%,#EED5D0_35%,#E2B6B7_70%,#786680_100%)] min-h-screen relative overflow-hidden">
+    <main className="flex-grow bg-[linear-gradient(to_bottom,#C1AEC1_30%,#EED5D0_35%,#E2B6B7_70%,#786680_150%)] min-h-screen relative overflow-hidden">
       
       {/* HERO SECTION */}
       <section className="relative w-full pt-28 md:pt-40 pb-20 md:pb-32 bg-[url('/images/floral-bg.webp')] bg-cover bg-top bg-no-repeat">
