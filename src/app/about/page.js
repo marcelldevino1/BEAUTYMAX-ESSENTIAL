@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -7,6 +7,7 @@ export default function AboutPage() {
   // ==========================================
   // REVISI GLASSMORPHISM: Disamakan persis dengan Main Page (Hitam pekat, border putih tebal, teks putih)
   // ==========================================
+  const [isMissionHovered, setIsMissionHovered] = useState(false);
   const glassHeaderStyle = "bg-black/35 backdrop-blur-md border-[3px] border-white text-white rounded-full shadow-lg";
 
   return (
@@ -16,7 +17,7 @@ export default function AboutPage() {
       {/* ========================================== */}
       {/* GLOBAL FLOATING ORNAMENTS (Bunga & Hati) */}
       {/* ========================================== */}
-      <img src="/images/love-ornament.webp" alt="love" loading="lazy" className="absolute top-[15%] left-[5%] md:left-[10%] w-24 md:w-40 z-0 pointer-events-none opacity-90 drop-shadow-lg" />
+      <img src="/images/love2.webp" alt="love" loading="lazy" className="absolute top-[15%] left-[5%] md:left-[10%] w-24 md:w-40 z-0 pointer-events-none opacity-90 drop-shadow-lg" />
       <img src="/images/blur-floral-left.webp" alt="petal" loading="lazy" className="absolute top-[35%] right-[-5%] w-32 md:w-64 z-0 pointer-events-none opacity-80" />
       <img src="/images/floral-right.webp" alt="petal" loading="lazy" className="absolute top-[60%] left-[-5%] w-32 md:w-64 z-0 pointer-events-none opacity-80" />
       <img src="/images/blur-floral-left.webp" alt="petal" loading="lazy" className="absolute bottom-[10%] right-[5%] w-20 md:w-40 z-0 pointer-events-none opacity-80" />
@@ -29,8 +30,13 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
             
             <div className="md:col-span-6 lg:col-span-7">
-              <span className="inline-block text-sm font-bold text-[#766350] mb-4 uppercase tracking-widest">PT BEAUTYMAX Essential Indonesia</span>
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] text-[#766350] mb-8 drop-shadow-sm">
+              {/* REVISI POIN 3: Ditambahkan border-b-[1.5px] border-[#766350]/40 dan pb-2 biar ada garis pembatas */}
+              <span className="inline-block text-xs md:text-sm font-bold text-[#766350] mb-6 uppercase tracking-widest border-b-[1.5px] border-[#766350]/40 pb-2">
+                PT BEAUTYMAX Essential Indonesia
+              </span>
+              
+              {/* Sedikit penyesuaian font agar seimbang */}
+              <h1 className="font-serif text-[2.75rem] md:text-6xl lg:text-7xl font-bold leading-[1.1] text-[#766350] mb-8 drop-shadow-sm">
                 Beauty for<br/>Every Expression.
               </h1>
             </div>
@@ -64,26 +70,34 @@ export default function AboutPage() {
       {/* VISION & MISSION */}
       {/* ========================================== */}
       <section className="w-full px-3 md:px-6 lg:px-8 py-16 md:py-24 relative z-10 flex justify-center">
-        {/* REVISI: Mengubah p-20 menjadi px-20 lg:py-32 agar atas-bawahnya jauh lebih lega. 
-            Ditambah items-center agar teks berada persis di tengah-tengah kotak. */}
+        
         <div className="w-full max-w-[1800px] bg-white/80 backdrop-blur-xl rounded-[2rem] lg:rounded-[2.5rem] px-10 py-16 md:px-16 md:py-24 lg:px-20 lg:py-32 shadow-2xl border border-white/60 flex flex-col md:flex-row gap-12 md:gap-20 lg:gap-24 items-center">
           
-          <ScrollReveal className="md:w-[55%] w-full">
-            {/* Jarak dari garis ke tulisan 'Our Vision' diperlebar sedikit (pt-12) */}
+          {/* KOLOM VISION */}
+          {/* Lebar kolom (w) juga dianimasikan supaya proporsional dengan teksnya */}
+          <ScrollReveal className={`w-full transition-all duration-700 ease-in-out ${isMissionHovered ? 'md:w-[45%]' : 'md:w-[55%]'}`}>
             <div className="border-t-[1.5px] border-[#766350]/30 pt-10 md:pt-12">
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#766350]/80 mb-6 md:mb-8">Our Vision</span>
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#766350]/80 mb-6 md:mb-8 transition-all">Our Vision</span>
               
-              <h3 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-[#766350] leading-tight">
+              {/* Ukuran & Font ditukar dinamis berdasarkan status isMissionHovered */}
+              <h3 className={`text-[#766350] transition-all duration-700 ease-in-out ${isMissionHovered ? 'text-base md:text-lg lg:text-xl font-medium leading-relaxed font-sans' : 'font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight'}`}>
                 "Shaping a world where diverse, trend-forward beauty experiences empower everyone to express their authentic selves."
               </h3>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={150} className="md:w-[45%] w-full">
-            <div className="border-t-[1.5px] border-[#766350]/30 pt-10 md:pt-12 flex flex-col h-full">
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#766350]/80 mb-6 md:mb-8">Our Mission</span>
+          {/* KOLOM MISSION */}
+          {/* Lebar kolom membesar saat di-hover */}
+          <ScrollReveal delay={150} className={`w-full transition-all duration-700 ease-in-out ${isMissionHovered ? 'md:w-[55%]' : 'md:w-[45%]'}`}>
+            <div 
+              className="border-t-[1.5px] border-[#766350]/30 pt-10 md:pt-12 flex flex-col h-full cursor-pointer"
+              onMouseEnter={() => setIsMissionHovered(true)}
+              onMouseLeave={() => setIsMissionHovered(false)}
+            >
+              <span className={`inline-block text-xs font-bold uppercase tracking-widest mb-6 md:mb-8 transition-colors duration-700 ${isMissionHovered ? 'text-[#B45D6A]' : 'text-[#766350]/80'}`}>Our Mission</span>
               
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-[#766350] font-medium">
+              {/* Teks Mission membesar dan ganti gaya ke serif saat di-hover */}
+              <p className={`text-[#766350] transition-all duration-700 ease-in-out ${isMissionHovered ? 'font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight' : 'text-base md:text-lg lg:text-xl font-medium leading-relaxed font-sans'}`}>
                 To create accessible, insight-driven beauty products, foster purposeful partnerships, champion responsible brand development, and deliver sustainable value for our global communities.
               </p>
             </div>
@@ -93,85 +107,91 @@ export default function AboutPage() {
       </section>
 
       {/* ========================================== */}
-      {/* CORE PILLARS & COMMITMENT */}
+      {/* CORE PILLARS & COMMITMENT (DARK THEME - REVISED) */}
       {/* ========================================== */}
-      <section className="w-full py-10 md:py-20 relative z-10">
-        <div className="px-6 md:px-16 max-w-6xl mx-auto flex flex-col items-center">
-          
-          {/* Gambar Model */}
-          <ScrollReveal className="w-full max-w-4xl relative mb-16">
-             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-white/60">
-                <img 
-                  src="/images/our-commitment.webp" 
-                  alt="Our Commitment & Strength" 
-                  className="w-full h-auto object-cover" 
-                  loading="lazy"
-                />
-             </div>
+      <section className="w-full py-16 md:py-24 relative z-10">
+        <div className="px-6 md:px-12 max-w-[1600px] mx-auto">
+          <ScrollReveal>
+            <div className="bg-[#111111] rounded-[2rem] lg:rounded-[3rem] p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12 lg:gap-16 items-center shadow-2xl">
+              
+              {/* KIRI: Gambar Model */}
+              <div className="w-full lg:w-[45%] relative">
+                <div className="relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl border-[4px] border-white/10">
+                  <img 
+                    src="/images/our-commitment.webp" 
+                    alt="Our Commitment & Strength" 
+                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-out" 
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* KANAN: Konten Core Pillars */}
+              <div className="w-full lg:w-[55%] flex flex-col">
+                
+                {/* Judul Section (Hierarki Warna Baru) */}
+                <div className="mb-10 lg:mb-14">
+                  {/* Warna Bronze/Taupe agar tidak duplicate dengan gold di bawah */}
+                  <span className="inline-block text-xs md:text-sm font-bold uppercase tracking-widest text-[#B5A493] mb-3">
+                    Operational Strength
+                  </span>
+                  {/* Recolored: Gradasi Silver/Pearl yang mewah */}
+                  <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-[#EAEAEA] to-[#999999] text-transparent bg-clip-text drop-shadow-sm w-max">
+                    Core Pillars
+                  </h2>
+                </div>
+                
+                {/* Grid 4 Pilar (2x2) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-8 w-full">
+                  
+                  {/* Pillar 1 */}
+                  <div className="group">
+                    {/* Slogan super mencolok: Ukuran diperbesar + Gradasi Bright Gold + Efek Hover Zoom ringan */}
+                    <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 bg-gradient-to-r from-[#F5D061] to-[#C79135] text-transparent bg-clip-text drop-shadow-md group-hover:scale-[1.02] transition-transform origin-left w-max">
+                      Premium OEM/ODM
+                    </h3>
+                    <p className="text-sm md:text-base text-white/70 leading-relaxed font-light group-hover:text-white/90 transition-colors">
+                      Premium OEM/ODM services backed by world-class production infrastructure. Trusted manufacturing partner for prominent international beauty brands like L.A. Colors and S.he.
+                    </p>
+                  </div>
+
+                  {/* Pillar 2 */}
+                  <div className="group">
+                    <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 bg-gradient-to-r from-[#F5D061] to-[#C79135] text-transparent bg-clip-text drop-shadow-md group-hover:scale-[1.02] transition-transform origin-left w-max">
+                      Global Certifications
+                    </h3>
+                    <p className="text-sm md:text-base text-white/70 leading-relaxed font-light group-hover:text-white/90 transition-colors">
+                      Facilities strictly certified by international and regional standards, including GMPC, ISO 22716, FDA, Indonesian BPOM, and HALAL, ensuring seamless global market entry.
+                    </p>
+                  </div>
+
+                  {/* Pillar 3 */}
+                  <div className="group">
+                    <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 bg-gradient-to-r from-[#F5D061] to-[#C79135] text-transparent bg-clip-text drop-shadow-md group-hover:scale-[1.02] transition-transform origin-left w-max">
+                      Retail Presence
+                    </h3>
+                    <p className="text-sm md:text-base text-white/70 leading-relaxed font-light group-hover:text-white/90 transition-colors">
+                      Commanding a massive global retail presence with tier-1 partners including Watsons, Walmart, MINISO, KKV and SANFU, among many others.
+                    </p>
+                  </div>
+
+                  {/* Pillar 4 */}
+                  <div className="group">
+                    <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 bg-gradient-to-r from-[#F5D061] to-[#C79135] text-transparent bg-clip-text drop-shadow-md group-hover:scale-[1.02] transition-transform origin-left w-max">
+                      IP Partnerships
+                    </h3>
+                    <p className="text-sm md:text-base text-white/70 leading-relaxed font-light group-hover:text-white/90 transition-colors">
+                      Amplifying market engagement through high-profile intellectual property partnerships, including exclusive collaborations with Disney and B.Duck, alongside a growing portfolio of global icons.
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
           </ScrollReveal>
-
-          {/* Judul Section (Warna #766350) */}
-          <ScrollReveal className="text-center mb-20 flex flex-col items-center">
-            <span className="inline-block text-sm md:text-base font-bold uppercase tracking-widest text-[#766350]/80 mb-2">Operational Strength</span>
-            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-[#766350]">Core Pillars</h2>
-          </ScrollReveal>
-          
-          {/* Grid 4 Pilar */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-10 md:gap-x-16 w-full">
-            
-            {/* Pillar 1 */}
-            <ScrollReveal delay={100} className="relative pt-6">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-max">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 md:py-2.5 text-sm md:text-base font-bold uppercase tracking-wider`}>Premium OEM/ODM</h3>
-              </div>
-              <div className="bg-white/90 backdrop-blur-md rounded-[2rem] p-8 md:p-10 pt-14 md:pt-16 shadow-xl text-center border border-white/60 relative z-10 h-full flex items-center justify-center">
-                <p className="text-sm md:text-base text-[#766350] leading-relaxed font-medium">
-                  Premium OEM/ODM services backed by world-class production infrastructure. Trusted manufacturing partner for prominent international beauty brands like L.A. Colors and S.he.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Pillar 2 */}
-            <ScrollReveal delay={200} className="relative pt-6">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-max">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 md:py-2.5 text-sm md:text-base font-bold uppercase tracking-wider`}>Global Certifications</h3>
-              </div>
-              <div className="bg-white/90 backdrop-blur-md rounded-[2rem] p-8 md:p-10 pt-14 md:pt-16 shadow-xl text-center border border-white/60 relative z-10 h-full flex items-center justify-center">
-                <p className="text-sm md:text-base text-[#766350] leading-relaxed font-medium">
-                  Facilities strictly certified by international and regional standards, including GMPC, ISO 22716, FDA, Indonesian BPOM, and HALAL, ensuring seamless global market entry.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Pillar 3 */}
-            <ScrollReveal delay={300} className="relative pt-6">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-max">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 md:py-2.5 text-sm md:text-base font-bold uppercase tracking-wider`}>Retail Presence</h3>
-              </div>
-              <div className="bg-white/90 backdrop-blur-md rounded-[2rem] p-8 md:p-10 pt-14 md:pt-16 shadow-xl text-center border border-white/60 relative z-10 h-full flex items-center justify-center">
-                <p className="text-sm md:text-base text-[#766350] leading-relaxed font-medium">
-                  Commanding a massive global retail presence with tier-1 partners including Walmart, MINISO, KKV and SANFU, among many others.
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Pillar 4 */}
-            <ScrollReveal delay={400} className="relative pt-6">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-max">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 md:py-2.5 text-sm md:text-base font-bold uppercase tracking-wider`}>IP Partnerships</h3>
-              </div>
-              <div className="bg-white/90 backdrop-blur-md rounded-[2rem] p-8 md:p-10 pt-14 md:pt-16 shadow-xl text-center border border-white/60 relative z-10 h-full flex items-center justify-center">
-                <p className="text-sm md:text-base text-[#766350] leading-relaxed font-medium">
-                  Amplifying market engagement through high-profile intellectual property partnerships, including exclusive collaborations with Disney and B.Duck, alongside a growing portfolio of global icons.
-                </p>
-              </div>
-            </ScrollReveal>
-
-          </div>
-
         </div>
       </section>
-
     </main>
   );
 }

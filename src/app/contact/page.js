@@ -40,7 +40,6 @@ export default function ContactPage() {
     }
   };
 
-  // Glassmorphism styling disesuaikan warnanya menggunakan #766350
   const glassInfoStyle = "bg-[#766350]/60 backdrop-blur-md border-[2px] border-white/70 text-white shadow-[0_8px_16px_rgba(0,0,0,0.15)]";
 
   return (
@@ -68,7 +67,6 @@ export default function ContactPage() {
             </div>
           </ScrollReveal>
 
-          {/* REVISI 1: Email diubah ke center@jk.beautymaxid.com */}
           <ScrollReveal delay={100}>
             <div className="flex flex-col gap-4">
               <h3 className="text-base font-serif font-bold text-[#766350]">Direct Correspondence</h3>
@@ -83,6 +81,16 @@ export default function ContactPage() {
               <h3 className="text-base font-serif font-bold text-[#766350]">Digital Presence</h3>
               <div className="flex flex-col gap-4">
                 
+                {/* REVISI 1: LinkedIn dipindah ke urutan pertama dan teks tambahan dihapus */}
+                <a className="flex items-center gap-4 group w-max" href="https://www.linkedin.com/company/pt-beautymax-essential-indonesia/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
+                  <span className={`w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 ${glassInfoStyle}`}>
+                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </span>
+                  <span className="text-lg text-[#766350] font-medium opacity-90 group-hover:opacity-100 transition-opacity">LinkedIn</span>
+                </a>
+
                 {/* Instagram */}
                 <a className="flex items-center gap-4 group w-max" href="https://www.instagram.com/bkcosmetics.idn/" target="_blank" rel="noopener noreferrer">
                   <span className={`w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 ${glassInfoStyle}`}>
@@ -103,16 +111,6 @@ export default function ContactPage() {
                   <span className="text-lg text-[#766350] font-medium opacity-90 group-hover:opacity-100 transition-opacity">@bkcosmetics.idn</span>
                 </a>
 
-                {/* REVISI 2: LinkedIn ditambahkan (@bkcosmetics.idn) */}
-                <a className="flex items-center gap-4 group w-max" href="https://www.linkedin.com/company/pt-beautymax-essential-indonesia/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
-                  <span className={`w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300 ${glassInfoStyle}`}>
-                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                  </span>
-                  <span className="text-lg text-[#766350] font-medium opacity-90 group-hover:opacity-100 transition-opacity">LinkedIn (@bkcosmetics.idn)</span>
-                </a>
-
               </div>
             </div>
           </ScrollReveal>
@@ -127,13 +125,14 @@ export default function ContactPage() {
             <div className="relative rounded-[3rem] shadow-2xl overflow-hidden bg-white/50 border-[6px] border-white/60">
               
               <img 
-                src="/images/form-texture.webp" 
+                src="/images/box.webp" 
                 alt="Canvas Texture" 
                 className="absolute inset-0 w-full h-full object-cover object-center scale-110 opacity-90 mix-blend-multiply z-0 pointer-events-none"
               />
 
               <div className="relative z-10 p-10 md:p-14">
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#766350] mb-12 text-center drop-shadow-sm">Send an Inquiry</h2>
+                {/* REVISI 2: Judul Form dirubah menjadi left-aligned */}
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#766350] mb-12 text-left drop-shadow-sm">Send an Inquiry</h2>
                 
                 {status.success && (
                   <div className="mb-8 p-4 bg-green-50/90 rounded-xl border-l-4 border-green-500 text-green-800 text-sm font-medium backdrop-blur-sm">
@@ -146,46 +145,60 @@ export default function ContactPage() {
                   </div>
                 )}
 
-                {/* REVISI 3: Warna input dan garis diseragamkan ke #766350 */}
                 <form onSubmit={handleSubmit} className="flex flex-col gap-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="relative group">
-                      <label className="text-[13px] md:text-sm font-bold text-[#766350] block mb-2" htmlFor="name">Full Name</label>
+                      <label className="text-[13px] md:text-sm font-bold text-[#766350] block mb-2 uppercase tracking-widest" htmlFor="name">Full Name</label>
+                      {/* REVISI 3: Menambahkan Placeholder (e.g. Jane Doe) dan mengganti style placeholder */}
                       <input 
-                        className="w-full bg-transparent border-0 border-b-[1.5px] border-[#766350]/40 focus:border-[#766350] focus:ring-0 px-0 py-2 text-[#766350] font-medium transition-colors placeholder:text-transparent outline-none" 
+                        className="w-full bg-transparent border-0 border-b-[1.5px] border-[#766350]/40 focus:border-[#766350] focus:ring-0 px-0 py-2 text-[#766350] font-medium transition-colors placeholder:text-[#766350]/40 outline-none" 
                         id="name" name="name" type="text"
+                        placeholder="e.g. Jane Doe"
                         value={formData.name} onChange={handleChange} disabled={status.loading}
                       />
                     </div>
                     <div className="relative group">
-                      <label className="text-[13px] md:text-sm font-bold text-[#766350] block mb-2" htmlFor="email">Email Address</label>
+                      <label className="text-[13px] md:text-sm font-bold text-[#766350] block mb-2 uppercase tracking-widest" htmlFor="email">Email Address</label>
                       <input 
-                        className="w-full bg-transparent border-0 border-b-[1.5px] border-[#766350]/40 focus:border-[#766350] focus:ring-0 px-0 py-2 text-[#766350] font-medium transition-colors placeholder:text-transparent outline-none" 
+                        className="w-full bg-transparent border-0 border-b-[1.5px] border-[#766350]/40 focus:border-[#766350] focus:ring-0 px-0 py-2 text-[#766350] font-medium transition-colors placeholder:text-[#766350]/40 outline-none" 
                         id="email" name="email" type="email"
+                        placeholder="e.g. jane@company.com"
                         value={formData.email} onChange={handleChange} disabled={status.loading}
                       />
                     </div>
                   </div>
 
                   <div className="relative group">
-                    <label className="text-[13px] md:text-sm font-bold text-[#766350] block mb-2" htmlFor="subject">Inquiry Subject</label>
-                    <input 
-                      className="w-full bg-transparent border-0 border-b-[1.5px] border-[#766350]/40 focus:border-[#766350] focus:ring-0 px-0 py-2 text-[#766350] font-medium transition-colors outline-none" 
-                      id="subject" name="subject" type="text" 
-                      value={formData.subject} onChange={handleChange} disabled={status.loading}
-                    />
+                    <label className="text-[13px] md:text-sm font-bold text-[#766350] block mb-2 uppercase tracking-widest" htmlFor="subject">Inquiry Subject</label>
+                    {/* REVISI 3: Mengubah Input Text menjadi Select Dropdown */}
+                    <div className="relative">
+                      <select 
+                        className="w-full bg-transparent border-0 border-b-[1.5px] border-[#766350]/40 focus:border-[#766350] focus:ring-0 px-0 py-2 text-[#766350] font-medium transition-colors outline-none appearance-none cursor-pointer" 
+                        id="subject" name="subject"
+                        value={formData.subject} onChange={handleChange} disabled={status.loading}
+                      >
+                        <option value="" disabled hidden>Select a topic...</option>
+                        <option value="OEM/ODM Manufacturing">OEM/ODM Manufacturing</option>
+                        <option value="Brand Partnership">Brand Partnership</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      {/* Custom dropdown icon */}
+                      <span className="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-[#766350]">expand_more</span>
+                    </div>
                   </div>
 
                   <div className="relative group mb-4">
-                    <label className="text-[13px] md:text-sm font-bold text-[#766350] block mb-2" htmlFor="message">Your Message</label>
+                    <label className="text-[13px] md:text-sm font-bold text-[#766350] block mb-2 uppercase tracking-widest" htmlFor="message">Your Message</label>
                     <textarea 
-                      className="w-full bg-transparent border-0 border-b-[1.5px] border-[#766350]/40 focus:border-[#766350] focus:ring-0 px-0 py-2 text-[#766350] font-medium transition-colors resize-none outline-none" 
+                      className="w-full bg-transparent border-0 border-b-[1.5px] border-[#766350]/40 focus:border-[#766350] focus:ring-0 px-0 py-2 text-[#766350] font-medium transition-colors resize-none placeholder:text-[#766350]/40 outline-none" 
                       id="message" name="message" rows="2"
+                      placeholder="Please provide details about your inquiry..."
                       value={formData.message} onChange={handleChange} disabled={status.loading}
                     ></textarea>
                   </div>
 
-                  <div className="flex justify-center pt-2">
+                  <div className="flex justify-center md:justify-start pt-2">
                     <button 
                       className={`text-base font-bold px-12 py-4 transition-all duration-300 rounded-[1rem] shadow-xl hover:scale-105 ${status.loading ? 'bg-gray-400 text-white cursor-not-allowed' : 'bg-[#766350] border border-[#766350] text-white hover:bg-[#766350]/80'}`}
                       type="submit"

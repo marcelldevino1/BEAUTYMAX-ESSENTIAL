@@ -139,7 +139,6 @@ export default function Home() {
       {/* ======================================= */}
       <section className="relative w-full py-10 md:py-16 mb-20 md:mb-32">
         
-        {/* FLORAL 1: Brands - Kiri Atas */}
         <img 
           src="/images/blur-floral-left.webp" 
           alt="floral" 
@@ -152,8 +151,8 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 items-center mb-16 gap-6">
               
               <div className="flex justify-center md:justify-start">
-                {/* Tambahkan whitespace-nowrap di sini biar teksnya nggak turun ke bawah */}
-                <h2 className={`${glassHeaderStyle} px-8 py-3 text-2xl md:text-3xl font-bold tracking-wide whitespace-nowrap w-max`}>
+                {/* Poin 3: Font Size Proprietary Brands diperkecil */}
+                <h2 className={`${glassHeaderStyle} px-6 py-2 md:py-2.5 text-lg md:text-xl font-bold tracking-wide whitespace-nowrap w-max`}>
                   Proprietary Brands
                 </h2>
               </div>
@@ -162,13 +161,14 @@ export default function Home() {
                  <img 
                    src="/images/love-ornament.webp" 
                    alt="Love Accent" 
-                   className="h-10 md:h-14 w-auto object-contain drop-shadow-md" 
+                   className="h-8 md:h-12 w-auto object-contain drop-shadow-md" 
                  />
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <Link className={`${glassButtonStyle} px-8 py-3 text-sm md:text-base font-bold flex items-center gap-3`} href="/brands">
-                  View Directory <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                {/* Poin 3: Font Size View Directory diperkecil */}
+                <Link className={`${glassButtonStyle} px-6 py-2 md:py-2.5 text-xs font-bold flex items-center gap-2`} href="/brands">
+                  View Directory <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </Link>
               </div>
 
@@ -176,118 +176,124 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+            {/* Poin 5: items-start untuk memungkinkan stepped layout (berundak) */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mt-4 items-start">
               
-              {/* Brand 1: BK */}
-              <div className="flex flex-col items-center group cursor-pointer">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wider z-10`}>BK Cosmetics</h3>
-                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white/50 shadow-xl bg-white/20 backdrop-blur-sm">
+              {/* Brand 1: BK (Paling Atas) */}
+              <Link href="/brands#bk" className="flex flex-col group mt-0">
+                <div className="w-full aspect-[4/5] overflow-hidden rounded-[2rem] border-[4px] border-white/60 shadow-xl mb-4">
                   <img alt="BK Cosmetics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/bk-discover.webp" loading="lazy" />
                 </div>
-                <Link href="/brands#bk" className={`${glassButtonStyle} px-10 py-2 text-sm font-bold uppercase tracking-wider`}>
-                  Discover
-                </Link>
-              </div>
+                {/* Poin 4: Teks berada murni di bawah gambar tanpa pill Discover */}
+                <div className="px-2 text-left">
+                  <h3 className="font-serif text-[#766350] text-xl md:text-2xl font-bold mb-1 group-hover:opacity-70 transition-opacity">BK Cosmetics</h3>
+                  <p className="text-[#766350]/80 text-xs md:text-sm font-medium">Be Kind. Be Kool. Be You.</p>
+                </div>
+              </Link>
               
-              {/* Brand 2: ME5 */}
-              <div className="flex flex-col items-center group cursor-pointer">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wider z-10`}>ME5</h3>
-                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white/50 shadow-xl bg-white/20 backdrop-blur-sm">
+              {/* Brand 2: ME5 (Poin 5: Stepped / Turun Sedikit) */}
+              <Link href="/brands#me5" className="flex flex-col group mt-0 md:mt-16">
+                <div className="w-full aspect-[4/5] overflow-hidden rounded-[2rem] border-[4px] border-white/60 shadow-xl mb-4">
                   <img alt="ME5 Skincare" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/me5-discover.webp" loading="lazy" />
                 </div>
-                <Link href="/brands#me5" className={`${glassButtonStyle} px-10 py-2 text-sm font-bold uppercase tracking-wider`}>
-                  Discover
-                </Link>
-              </div>
+                <div className="px-2 text-left">
+                  <h3 className="font-serif text-[#766350] text-xl md:text-2xl font-bold mb-1 group-hover:opacity-70 transition-opacity">ME5</h3>
+                  <p className="text-[#766350]/80 text-xs md:text-sm font-medium">Your Eyes, Your Magic, Your ME5.</p>
+                </div>
+              </Link>
               
-              {/* Brand 3: AG */}
-              <div className="flex flex-col items-center group cursor-pointer">
-                <h3 className={`${glassHeaderStyle} px-6 py-2 text-lg md:text-xl font-bold mb-6 uppercase tracking-wider z-10`}>Angela Glamour</h3>
-                <div className="w-full aspect-[4/5] overflow-hidden mb-6 rounded-[2rem] border-[6px] md:border-[8px] border-white/50 shadow-xl bg-white/20 backdrop-blur-sm">
+              {/* Brand 3: AG (Poin 5: Stepped / Turun Paling Bawah) */}
+              <Link href="/brands#ag" className="flex flex-col group mt-0 md:mt-32">
+                <div className="w-full aspect-[4/5] overflow-hidden rounded-[2rem] border-[4px] border-white/60 shadow-xl mb-4">
                   <img alt="AG Fragrance" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/ag-discover.webp" loading="lazy" />
                 </div>
-                <Link href="/brands#ag" className={`${glassButtonStyle} px-10 py-2 text-sm font-bold uppercase tracking-wider`}>
-                  Discover
-                </Link>
-              </div>
-
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ======================================= */}
-      {/* ABOUT THE COMPANY & BUILDING (NEW LAYOUT) */}
-      {/* ======================================= */}
-      <section className="relative w-full py-16 md:py-24">
-
-        {/* FLORAL 2: About The Company - Kanan Atas */}
-        <img 
-          src="/images/floral-right.webp" 
-          alt="floral" 
-          loading="lazy"
-          className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 w-32 md:w-60 z-0 pointer-events-none opacity-90 drop-shadow-lg"
-        />
-
-        <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
-          
-          {/* Title Pill (Di atas kotak putih) */}
-          <div className="flex justify-start mb-6">
-            <h2 className={`${glassHeaderStyle} px-8 py-2 md:py-3 text-lg md:text-xl font-bold tracking-wide`}>
-              About The Company
-            </h2>
-          </div>
-
-          <ScrollReveal>
-            {/* Box Utama: SEKARANG DIPISAH (Menggunakan gap-6 untuk jarak antar card) */}
-            <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-stretch">
-              
-              {/* Kolom Kiri: Konten Teks (Memiliki background putih sendiri) */}
-              <div className="w-full lg:w-1/2 bg-white shadow-2xl rounded-[2rem] border border-white/50 p-10 md:p-14 lg:p-16 flex flex-col justify-center">
-                <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#766350]/60 mb-6 block">
-                  About The Company
-                </span>
-                
-                <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#766350] leading-tight mb-8">
-                  Pioneering the color cosmetics industry Since 2002.
-                </h3>
-                
-                <div className="space-y-6 text-sm md:text-base text-[#766350] leading-relaxed font-medium">
-                  <p>
-                    PT Beautymax Essential Indonesia is a dynamic beauty pioneer that seamlessly bridges high-caliber, global-standard manufacturing with strategic brand management.
-                  </p>
-                  <p>
-                    Operating from state-of-the-art facilities, the company delivers premium OEM/ODM services to international leaders while nurturing a diverse portfolio of proprietary, trend-driven beauty brands.
-                  </p>
-                  <p>
-                    Driven by deep consumer insight and market agility, Beautymax empowers individuality across all generations and lifestyles.
-                  </p>
+                <div className="px-2 text-left">
+                  <h3 className="font-serif text-[#766350] text-xl md:text-2xl font-bold mb-1 group-hover:opacity-70 transition-opacity">AG (Angela Glamor)</h3>
+                  <p className="text-[#766350]/80 text-xs md:text-sm font-medium">Flawless Skin. Impeccable Gel Nails.</p>
                 </div>
-                
-                <Link href="/about" className="mt-10 text-xs font-bold uppercase tracking-widest text-[#766350] hover:text-[#766350]/70 flex items-center gap-2 transition-colors w-max">
-                  DISCOVER OUR PROFILE <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                </Link>
-              </div>
+              </Link>
 
-              {/* Kolom Kanan: Gambar Gedung (Berdiri sendiri menjadi card terpisah) */}
-              <div className="w-full lg:w-1/2 min-h-[350px] sm:min-h-[450px] lg:min-h-auto relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/50">
-                <img
-                  alt="Beautymax Essential HQ"
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
-                  src="/images/office-building.webp"
-                />
-              </div>
-              
             </div>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* ======================================= */}
+{/* ABOUT THE COMPANY & BUILDING (REVISED MOBILE LAYOUT) */}
+{/* ======================================= */}
+<section className="relative w-full py-16 md:py-24">
+
+  {/* FLORAL 2: About The Company - Kanan Atas */}
+  <img 
+    src="/images/floral-right.webp" 
+    alt="floral" 
+    loading="lazy"
+    className="absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 w-32 md:w-60 z-0 pointer-events-none opacity-90 drop-shadow-lg"
+  />
+
+  <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
+    <ScrollReveal>
+      <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
+        
+        {/* Kolom Kiri: Konten Teks */}
+        {/* Mobile: order-2 (di bawah), Desktop: lg:order-1 (di kiri) */}
+        <div className="w-full lg:w-1/2 py-4 flex flex-col justify-center order-2 lg:order-1 text-center lg:text-left">
+          
+          <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-[#B45D6A] mb-4 block">
+            About The Company
+          </span>
+          
+          <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#766350] leading-tight mb-6 lg:mb-8">
+            Pioneering the color cosmetics industry Since 2002.
+          </h3>
+          
+          <div className="space-y-4 md:space-y-6 text-sm md:text-base text-[#766350]/90 leading-relaxed font-medium">
+            <p>
+              PT Beautymax Essential Indonesia is a dynamic beauty pioneer that seamlessly bridges high-caliber, global-standard manufacturing with strategic brand management.
+            </p>
+            <p>
+              Operating from state-of-the-art facilities, the company delivers premium OEM/ODM services to international leaders while nurturing a diverse portfolio of proprietary, trend-driven beauty brands.
+            </p>
+            <p>
+              Driven by deep consumer insight and market agility, Beautymax empowers individuality across all generations and lifestyles.
+            </p>
+          </div>
+          
+          <Link href="/about" className="mt-8 md:mt-10 text-xs font-bold uppercase tracking-widest text-[#766350] hover:text-[#B45D6A] flex items-center justify-center lg:justify-start gap-2 transition-colors w-full lg:w-max group">
+            DISCOVER OUR PROFILE 
+            <span className="material-symbols-outlined text-[16px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </Link>
+        </div>
+
+        {/* Kolom Kanan: Gambar Gedung */}
+        {/* Mobile: order-1 (di atas), Desktop: lg:order-2 (di kanan) */}
+        <div className="w-full lg:w-1/2 relative rounded-2xl lg:rounded-[2rem] overflow-hidden shadow-2xl order-1 lg:order-2">
+          {/* Gambar untuk MOBILE (no background) */}
+          <img
+            alt="Beautymax Essential HQ"
+            loading="lazy"
+            className="w-full h-full aspect-[4/3] object-cover object-center lg:hidden hover:scale-105 transition-transform duration-1000 ease-out"
+            src="/images/office-building2.webp"
+          />
+          {/* Gambar untuk DESKTOP (with background) */}
+          <img
+            alt="Beautymax Essential HQ"
+            loading="lazy"
+            className="w-full h-full aspect-[4/3] lg:aspect-[4/5] object-cover object-center hidden lg:block hover:scale-105 transition-transform duration-1000 ease-out"
+            src="/images/office-building.webp"
+          />
+        </div>
+        
+      </div>
+    </ScrollReveal>
+  </div>
+</section>
 
       {/* ======================================= */}
       {/* OUR FACTORY (INFINITE MARQUEE SCROLL) */}
       {/* ======================================= */}
-      <section className="relative w-full py-10 md:py-16 mb-20 md:mb-32 mt-10 md:mt-24 overflow-hidden">
+      {/* REVISI POIN 1: Hapus overflow-hidden di sini agar bunga tidak kepotong kotak */}
+      <section className="relative w-full py-10 md:py-16 mb-20 md:mb-32 mt-10 md:mt-24">
         
         {/* FLORAL 3: Our Factory - Kiri Atas */}
         <img 
