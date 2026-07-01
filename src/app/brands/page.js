@@ -68,7 +68,7 @@ export default function BrandsPage() {
         {/* FONT: Alex Brush (Distinctive, Script, tapi JELAS BACA) */}
         <h3 className="text-[#766350] mb-6 font-normal tracking-wide" style={{ fontFamily: '"Alex Brush", cursive' }}>
           <span className="text-4xl md:text-6xl lg:text-7xl xl:text-[5rem] leading-tight block">
-            Be kind. Be kool. Be Your 
+            Be kind. Be kool. Be You
           </span>
         </h3>
         
