@@ -47,10 +47,15 @@ export default function Navbar() {
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "pt-4 md:pt-6" : "pt-6 md:pt-10"}`}>
         <div className="flex justify-between items-center px-6 md:px-12 max-w-[1600px] mx-auto">
           
-          {/* KIRI: Logo Text (REVISI: Font Serif tanpa bingkai Pill) */}
+          {/* KIRI: Logo Text (REVISI: Font Serif tanpa bingkai Pill + Icon Diperbesar) */}
           <div className="flex-shrink-0 z-50">
-            <Link className="font-serif text-lg md:text-xl lg:text-2xl font-bold tracking-wide text-[#111111] drop-shadow-sm" href="/">
-              BEAUTYMAX ESSENTIAL
+            <Link className="flex items-center gap-2 md:gap-3 font-serif text-lg md:text-xl lg:text-2xl font-bold tracking-wide text-[#111111] drop-shadow-sm" href="/">
+              <img 
+                src="/favicon.ico" 
+                alt="Beautymax Logo"
+                className="w-9 h-9 md:w-11 md:h-11 lg:w-12 lg:h-12 object-contain" 
+              />
+              <span>BEAUTYMAX ESSENTIAL</span>
             </Link>
           </div>
           
