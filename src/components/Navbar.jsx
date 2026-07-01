@@ -34,9 +34,6 @@ export default function Navbar() {
   }, [pathname]);
 
   const isActive = (path) => pathname === path;
-
-  // Style untuk Desktop Logo (Tetap menggunakan Pill)
-  const logoDesktopStyle = "hidden lg:flex bg-black/45 backdrop-blur-md border-[2px] border-white text-white text-xs lg:text-sm font-bold uppercase tracking-widest px-5 py-2 lg:px-6 lg:py-2.5 rounded-full shadow-lg hover:bg-black/60 hover:scale-105 transition-all duration-300";
   
   // Style untuk 4 menu tengah Desktop
   const middleNavButtonStyle = "bg-black/45 backdrop-blur-md border-[2px] border-white text-white text-[10px] lg:text-[11px] font-bold uppercase tracking-widest px-4 py-2 lg:px-5 lg:py-2 rounded-full shadow-lg hover:bg-black/60 hover:scale-105 transition-all duration-300";
@@ -50,14 +47,9 @@ export default function Navbar() {
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "pt-4 md:pt-6" : "pt-6 md:pt-10"}`}>
         <div className="flex justify-between items-center px-6 md:px-12 max-w-[1600px] mx-auto">
           
-          {/* KIRI: Logo Text */}
+          {/* KIRI: Logo Text (REVISI: Font Serif tanpa bingkai Pill) */}
           <div className="flex-shrink-0 z-50">
-            {/* Logo Desktop */}
-            <Link className={logoDesktopStyle} href="/">
-              BEAUTYMAX ESSENTIAL
-            </Link>
-            {/* Logo Mobile: Poin 1 Slide 12 (Tanpa background/kotak, text disesuaikan) */}
-            <Link className="lg:hidden flex text-[#111111] text-sm md:text-base font-bold uppercase tracking-widest drop-shadow-md" href="/">
+            <Link className="font-serif text-lg md:text-xl lg:text-2xl font-bold tracking-wide text-[#111111] drop-shadow-sm" href="/">
               BEAUTYMAX ESSENTIAL
             </Link>
           </div>
@@ -92,7 +84,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* MOBILE MENU BUTTON: Poin 1 Slide 12 (Icon garis 3 tanpa background pill) */}
+          {/* MOBILE MENU BUTTON */}
           <button className="lg:hidden relative z-50 flex items-center justify-center text-[#111111] drop-shadow-md p-1" onClick={() => setIsMobileOpen(true)}>
             <span className="material-symbols-outlined text-[28px] font-medium">menu</span>
           </button>
@@ -100,10 +92,9 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE DROPDOWN FULLSCREEN MENU (Slide 13: Light Mode & Elegant Serif Layout) */}
+      {/* MOBILE DROPDOWN FULLSCREEN MENU */}
       <div className={`fixed inset-0 bg-[#FDFDFD]/95 backdrop-blur-2xl z-[70] flex flex-col transition-transform duration-500 ease-in-out lg:hidden overflow-y-auto ${isMobileOpen ? "translate-x-0" : "translate-x-full"}`}>
         
-        {/* Header Menu Mobile */}
         <div className="w-full flex justify-between items-center px-8 h-[80px] shrink-0 pt-6">
           <span className="font-serif text-xl font-bold tracking-widest text-[#111111]">MENU</span>
           <button onClick={() => setIsMobileOpen(false)} className="flex items-center gap-1 text-[#111111]">
@@ -112,7 +103,6 @@ export default function Navbar() {
           </button>
         </div>
         
-        {/* Menu Links Utama */}
         <div className="flex flex-col items-center justify-center flex-grow gap-6 py-10">
           <Link onClick={() => setIsMobileOpen(false)} className={`font-serif text-[2rem] md:text-5xl transition-colors ${isActive('/') ? 'text-[#C8A97E]' : 'text-[#111111]'}`} href="/">Home</Link>
           <Link onClick={() => setIsMobileOpen(false)} className={`font-serif text-[2rem] md:text-5xl transition-colors ${isActive('/about') ? 'text-[#C8A97E]' : 'text-[#111111]'}`} href="/about">About</Link>
@@ -120,7 +110,6 @@ export default function Navbar() {
           <Link onClick={() => setIsMobileOpen(false)} className={`font-serif text-[2rem] md:text-5xl transition-colors ${isActive('/contact') ? 'text-[#C8A97E]' : 'text-[#111111]'}`} href="/contact">Contact</Link>
         </div>
         
-        {/* Shop Buttons (Kotak hitam tegas) */}
         <div className="w-full px-8 flex flex-col gap-3 items-center pb-12 shrink-0">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#C8A97E] mb-3 w-full text-center">Visit Our Stores</span>
           <Link href="/coming-soon" onClick={() => setIsMobileOpen(false)} className="w-full max-w-sm text-center flex justify-center bg-[#111111] text-white text-[11px] font-bold uppercase tracking-widest py-4 hover:bg-black/80 transition-colors">Shop BK Cosmetics</Link>

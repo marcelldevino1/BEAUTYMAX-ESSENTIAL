@@ -135,7 +135,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* ======================================= */}
-      {/* THE BRANDS */}
+      {/* THE BRANDS (REVISED LAYOUT & FONT) */}
       {/* ======================================= */}
       <section className="relative w-full py-10 md:py-16 mb-20 md:mb-32">
         
@@ -148,27 +148,19 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
           <ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 items-center mb-16 gap-6">
+            {/* REVISI: Menggunakan Flexbox dengan border bawah, love dihapus */}
+            <div className="flex flex-row justify-between items-end mb-12 md:mb-16 border-b-[1.5px] border-[#766350]/30 pb-4">
               
-              <div className="flex justify-center md:justify-start">
-                {/* Poin 3: Font Size Proprietary Brands diperkecil */}
-                <h2 className={`${glassHeaderStyle} px-6 py-2 md:py-2.5 text-lg md:text-xl font-bold tracking-wide whitespace-nowrap w-max`}>
+              <div className="flex justify-start">
+                <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-[#111111]">
                   Proprietary Brands
                 </h2>
               </div>
 
-              <div className="flex justify-center order-first md:order-none mb-4 md:mb-0">
-                 <img 
-                   src="/images/love-ornament.webp" 
-                   alt="Love Accent" 
-                   className="h-8 md:h-12 w-auto object-contain drop-shadow-md" 
-                 />
-              </div>
-
-              <div className="flex justify-center md:justify-end">
-                {/* Poin 3: Font Size View Directory diperkecil */}
-                <Link className={`${glassButtonStyle} px-6 py-2 md:py-2.5 text-xs font-bold flex items-center gap-2`} href="/brands">
-                  View Directory <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+              <div className="flex justify-end pb-1 md:pb-3">
+                {/* REVISI: Tombol Pill diubah menjadi teks biasa yang rapi */}
+                <Link className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#111111] hover:text-[#766350] transition-colors flex items-center gap-1 md:gap-2 group" href="/brands">
+                  VIEW DIRECTORY <span className="material-symbols-outlined text-[16px] md:text-[18px] transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </Link>
               </div>
 
@@ -176,7 +168,6 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
-            {/* Poin 5: items-start untuk memungkinkan stepped layout (berundak) */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mt-4 items-start">
               
               {/* Brand 1: BK (Paling Atas) */}
@@ -184,14 +175,13 @@ export default function Home() {
                 <div className="w-full aspect-[4/5] overflow-hidden rounded-[2rem] border-[4px] border-white/60 shadow-xl mb-4">
                   <img alt="BK Cosmetics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/bk-discover.webp" loading="lazy" />
                 </div>
-                {/* Poin 4: Teks berada murni di bawah gambar tanpa pill Discover */}
                 <div className="px-2 text-left">
                   <h3 className="font-serif text-[#766350] text-xl md:text-2xl font-bold mb-1 group-hover:opacity-70 transition-opacity">BK Cosmetics</h3>
                   <p className="text-[#766350]/80 text-xs md:text-sm font-medium">Be Kind. Be Kool. Be You.</p>
                 </div>
               </Link>
               
-              {/* Brand 2: ME5 (Poin 5: Stepped / Turun Sedikit) */}
+              {/* Brand 2: ME5 (Stepped / Turun Sedikit) */}
               <Link href="/brands#me5" className="flex flex-col group mt-0 md:mt-16">
                 <div className="w-full aspect-[4/5] overflow-hidden rounded-[2rem] border-[4px] border-white/60 shadow-xl mb-4">
                   <img alt="ME5 Skincare" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/me5-discover.webp" loading="lazy" />
@@ -202,7 +192,7 @@ export default function Home() {
                 </div>
               </Link>
               
-              {/* Brand 3: AG (Poin 5: Stepped / Turun Paling Bawah) */}
+              {/* Brand 3: AG (Stepped / Turun Paling Bawah) */}
               <Link href="/brands#ag" className="flex flex-col group mt-0 md:mt-32">
                 <div className="w-full aspect-[4/5] overflow-hidden rounded-[2rem] border-[4px] border-white/60 shadow-xl mb-4">
                   <img alt="AG Fragrance" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/ag-discover.webp" loading="lazy" />
@@ -292,7 +282,6 @@ export default function Home() {
       {/* ======================================= */}
       {/* OUR FACTORY (INFINITE MARQUEE SCROLL) */}
       {/* ======================================= */}
-      {/* REVISI POIN 1: Hapus overflow-hidden di sini agar bunga tidak kepotong kotak */}
       <section className="relative w-full py-10 md:py-16 mb-20 md:mb-32 mt-10 md:mt-24">
         
         {/* FLORAL 3: Our Factory - Kiri Atas */}
@@ -306,7 +295,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10 mb-10 md:mb-16">
           <ScrollReveal>
             <div className="flex flex-col items-center">
-              <h2 className={`${glassHeaderStyle} px-10 py-3 text-2xl md:text-3xl font-bold tracking-wide`}>
+              {/* REVISI: Font serif menggantikan desain kotak pill */}
+              <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-[#111111]">
                 Our Factory
               </h2>
             </div>
@@ -314,8 +304,7 @@ export default function Home() {
         </div>
         
         {/* ==============================================
-            CSS ANIMASI KHUSUS (Ditaruh di sini agar rapi) 
-            translateX(-50%) akan menggeser tepat setengah lebar kontainer.
+            CSS ANIMASI KHUSUS 
         ================================================== */}
         <style jsx>{`
           @keyframes marquee {
@@ -323,19 +312,15 @@ export default function Home() {
             100% { transform: translateX(-50%); }
           }
           .animate-marquee {
-            /* 35s = kecepatan scroll (makin besar angkanya makin lambat/santai) */
             animation: marquee 35s linear infinite;
           }
-          /* Efek premium: Berhenti geser kalau cursor di-hover (dipegang) */
           .animate-marquee:hover {
             animation-play-state: paused;
           }
         `}</style>
 
-        {/* Kontainer Slider - Dibuat w-full biar mentok ujung kiri-kanan layar */}
+        {/* Kontainer Slider */}
         <div className="relative w-full flex overflow-hidden group">
-          
-          {/* Track Animasi: Berisi 2 blok set gambar yang berdampingan */}
           <div className="flex w-max animate-marquee">
             
             {/* BLOK 1: Set 5 Gambar Asli */}
@@ -347,7 +332,7 @@ export default function Home() {
               ))}
             </div>
 
-            {/* BLOK 2: Duplikat Persis dari Blok 1 (Agar ilusi loop tidak pernah terputus) */}
+            {/* BLOK 2: Duplikat Persis dari Blok 1 */}
             <div className="flex gap-6 md:gap-10 px-3 md:px-5">
               {["/images/1.webp", "/images/2.webp", "/images/3.webp", "/images/4.webp", "/images/5.webp"].map((img, index) => (
                 <div key={`set2-${index}`} className="w-[280px] sm:w-[400px] md:w-[600px] aspect-[4/3] flex-shrink-0 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border-[6px] border-white/50 shadow-2xl bg-white/20">
