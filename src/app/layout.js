@@ -18,7 +18,7 @@ export const metadata = {
     template: '%s | Beautymax Essential'
   },
   description: 'Beautymax Essential is a dynamic beauty company. We empower individuality through high-quality, meticulously crafted beauty solutions.',
-  keywords: ['beauty', 'cosmetics', 'skincare', 'fragrance', 'beautymax essential', 'BK Cosmetics', 'ME5', 'Angela Glamor'],
+  keywords: ['beauty', 'cosmetics', 'skincare', 'fragrance', 'beautymax essential', 'BK Cosmetics', 'ME5', 'Angela Glamor', 'OEM cosmetics', 'ODM manufacturing', 'pabrik kosmetik', 'cosmetics manufacturer'],
   authors: [{ name: 'Beautymax Essential' }],
   creator: 'Beautymax Essential',
   openGraph: {
