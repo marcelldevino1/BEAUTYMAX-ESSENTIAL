@@ -152,7 +152,7 @@ export default function Home() {
             <div className="flex flex-row justify-between items-end mb-12 md:mb-16 border-b-[1.5px] border-[#766350]/30 pb-4">
               
               <div className="flex justify-start">
-                <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-[#111111]">
+                <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-[#766350]">
                   Proprietary Brands
                 </h2>
               </div>
@@ -296,7 +296,7 @@ export default function Home() {
           <ScrollReveal>
             <div className="flex flex-col items-center">
               {/* REVISI: Font serif menggantikan desain kotak pill */}
-              <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-[#111111]">
+              <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-[#766350]">
                 Our Factory
               </h2>
             </div>
