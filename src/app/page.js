@@ -191,16 +191,21 @@ export default function Home() {
                 </div>
               </Link>
               
-              {/* Brand 2: ME5 (Poin 5: Stepped / Turun Sedikit) */}
-              <Link href="/brands#me5" className="flex flex-col group mt-0 md:mt-16">
-                <div className="w-full aspect-[4/5] overflow-hidden rounded-[2rem] border-[4px] border-white/60 shadow-xl mb-4">
-                  <img alt="ME5 Skincare" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="/images/me5-discover.webp" loading="lazy" />
-                </div>
-                <div className="px-2 text-left">
-                  <h3 className="font-serif text-[#766350] text-xl md:text-2xl font-bold mb-1 group-hover:opacity-70 transition-opacity">ME5</h3>
-                  <p className="text-[#766350]/80 text-xs md:text-sm font-medium">Your Eyes, Your Magic, Your ME5.</p>
-                </div>
-              </Link>
+              {/* Brand 2: ME5 */}
+<Link href="/brands#me5" className="flex flex-col group mt-0 md:mt-16">
+  <div className="w-full aspect-[4/5] overflow-hidden rounded-[2rem] border-[4px] border-white/60 shadow-xl mb-4">
+    <img 
+      alt="ME5 Skincare" 
+      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" 
+      src="/images/me5-discover.webp" 
+      loading="lazy" 
+    />
+  </div>
+  <div className="px-2 text-left">
+    <h3 className="font-serif text-[#766350] text-xl md:text-2xl font-bold mb-1 group-hover:opacity-70 transition-opacity">ME5</h3>
+    <p className="text-[#766350]/80 text-xs md:text-sm font-medium">Your Eyes, Your Magic, Your ME5.</p>
+  </div>
+</Link>
               
               {/* Brand 3: AG (Poin 5: Stepped / Turun Paling Bawah) */}
               <Link href="/brands#ag" className="flex flex-col group mt-0 md:mt-32">
