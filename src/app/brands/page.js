@@ -120,8 +120,8 @@ export default function BrandsPage() {
         </div>
         
         {/* FONT: Alex Brush (Sekarang ME5 sudah "match" dengan BK & AG) */}
-        <h3 className="text-[#766350] mb-6 md:mb-8 leading-tight tracking-wide drop-shadow-sm font-normal" style={{ fontFamily: '"Alex Brush", cursive' }}>
-          <span className="text-3xl md:text-5xl lg:text-6xl xl:text-[4.5rem] block">
+        <h3 className="font-comic text-[#766350] mb-6 tracking-wide">
+  <span className="text-3xl md:text-5xl lg:text-5xl xl:text-[4.5rem] block">
             Your Eyes. Your Magic. Your ME5.
           </span>
         </h3>
