@@ -97,10 +97,12 @@ module.exports = {
         "section-gap": "120px",
         "margin-mobile": "24px"
       },
-      fontFamily: {
+        fontFamily: {
         "sans": ["var(--font-poppins)", "sans-serif"],
         "serif": ["var(--font-poppins)", "sans-serif"],
+        "comic": ["var(--font-comic)", "cursive"], 
         "body-md": ["var(--font-poppins)", "sans-serif"],
+        // ... sisa kode di bawahnya tetap sama
         "headline-md": ["var(--font-poppins)", "sans-serif"],
         "display-lg": ["var(--font-poppins)", "sans-serif"],
         "body-lg": ["var(--font-poppins)", "sans-serif"],

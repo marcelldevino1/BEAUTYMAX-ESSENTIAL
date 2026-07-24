@@ -66,11 +66,11 @@ export default function BrandsPage() {
         </div>
         
         {/* FONT: Alex Brush (Distinctive, Script, tapi JELAS BACA) */}
-        <h3 className="text-[#766350] mb-6 font-normal tracking-wide" style={{ fontFamily: '"Alex Brush", cursive' }}>
-          <span className="text-4xl md:text-6xl lg:text-7xl xl:text-[5rem] leading-tight block">
-            Be kind. Be kool. Be You
-          </span>
-        </h3>
+        <h3 className="font-comic text-[#766350] mb-6 tracking-wide">
+  <span className="text-3xl md:text-5xl lg:text-6xl xl:text-[4.5rem] block">
+    Be kind. Be kool. Be You
+  </span>
+</h3>
         
         <p className="text-sm md:text-base lg:text-lg text-[#766350] font-medium mb-8 md:mb-10 leading-relaxed max-w-md">
           A vibrant beauty universe tailored for the new generation. Encompassing three core lines—BUTYKISS, BUTYKOOL, and BUTYKLEAN—BK breaks traditional boundaries to offer a diverse, playful range across lips, skin, nails, and everyday self-care.
@@ -152,8 +152,8 @@ export default function BrandsPage() {
         </div>
         
         {/* FONT: Alex Brush (Jauh lebih rapi dan mudah dibaca dibanding Freestyle Script) */}
-        <h3 className="text-[#766350] mb-6 md:mb-8 font-normal leading-snug tracking-wide" style={{ fontFamily: '"Alex Brush", cursive' }}>
-          <span className="text-3xl md:text-5xl lg:text-6xl xl:text-[4.5rem] block">
+        <h3 className="font-comic text-[#766350] mb-6 tracking-wide">
+  <span className="text-3xl md:text-5xl lg:text-6xl xl:text-[4.5rem] block">
             Flawless Skin. Impeccable Gel Nails. Professional Glamor.
           </span>
         </h3>
